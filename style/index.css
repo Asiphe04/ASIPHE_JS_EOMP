@@ -2,9 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "roboto", sans-serif;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  
 }
 /* Navbar */
+header{
+  background-color: #161B22;
+}
 .circle-link {
   display: inline-block;
   width: 50px; /* adjust the size as needed */
@@ -17,7 +22,7 @@
 }
 
 .circle-link:hover {
-  background-color: green; /* set hover background color */
+  background-color: #238636; /* set hover background color */
 }
 
 .circle-link a {
@@ -46,7 +51,7 @@
   border: 1px solid #d1d1d1;
   text-transform: capitalize;
   background: none;
-  color: #a9a9a9;
+  color:white;
   outline: none;
 }
 .search-btn {
@@ -56,13 +61,13 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background: #383838;
+  background:  #238636;
   font-size: 15px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 .search-btn:hover {
-  background: #575656;
+  background: #40da5e;
 }
 .search-box::placeholder {
   color: #a9a9a9;
@@ -152,7 +157,7 @@ ul {
   list-style: none;
 }
 .footer {
-  background-color: #000000;
+  background-color:#21262d;
   padding: 70px 0;
 }
 
@@ -208,8 +213,8 @@ ul {
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
-  color: #24262b;
-  background-color: #ffffff;
+  color:white;
+  background-color: #238636;
 }
 
 /*responsive*/
@@ -229,7 +234,7 @@ ul {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: #010409;
   align-items: center;
   color: white;
 }
@@ -275,7 +280,7 @@ footer {
   transition-duration: 1s;
 }
 .footer0:hover {
-  color: rgb(243, 168, 7);
+  color:  #238636; 
 }
 .footer2 .heading {
   font-weight: 900;
@@ -289,7 +294,7 @@ footer {
   justify-content: center;
 }
 .footer2 .heading:hover {
-  color: rgb(243, 168, 7);
+  color: #238636;
 }
 .footer2 .div:hover {
   transform: scale(1.05);
@@ -415,7 +420,7 @@ footer {
     font-weight: 900;
   }
   .menu ul li a:hover {
-    color: rgb(240, 197, 6);
+    color: #238636;
   }
   .img-slider {
     display: flex;
