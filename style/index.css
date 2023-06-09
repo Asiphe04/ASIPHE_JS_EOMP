@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  
-  
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  background-color: #010409 !important;
 }
 /* Navbar */
-header{
-  background-color: #161B22;
+header {
+  background-color: #161b22;
 }
 .circle-link {
   display: inline-block;
@@ -51,7 +52,7 @@ header{
   border: 1px solid #d1d1d1;
   text-transform: capitalize;
   background: none;
-  color:white;
+  color: white;
   outline: none;
 }
 .search-btn {
@@ -61,7 +62,7 @@ header{
   border: none;
   outline: none;
   cursor: pointer;
-  background:  #238636;
+  background: #238636;
   font-size: 15px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -95,49 +96,59 @@ header{
 
 /* Links */
 .links-container {
-  padding: 10px 10vw;
+  padding: 3px 3vw;
 
   list-style: none;
-  border-top: 1px solid #d1d1d1;
 }
 
 .link {
   text-transform: capitalize;
-  padding: 0 10px;
+  padding: 0 5px;
   margin: 0 5px;
-  color: #383838;
-  opacity: 0.5;
+  /* color: #383838; */
+  color: white;
+  /* opacity: 0.5; */
   transition: 0.5s;
 }
 
 .link:hover {
-  opacity: 1;
+  background: #238636;
 }
 
 /* Hero section */
 .hero-section {
+  /* margin-left: 40px; */
   width: 100%;
-  height: calc(100vh - 120px);
-  background-image: url("/images/samsung-galaxy-s23-ultra-google-apps.jpg");
+  height: 350px;
+
   background-size: cover;
-  display: flex;
   justify-content: center;
-  align-items: center;
 }
-
-.hero-section .logo {
-  height: 150px;
-  display: block;
-  margin: auto;
-}
-
 .hero-section .sub-heading {
   margin-top: 10px;
-  text-align: center;
-  color: #fff;
+
+  color: white;
   text-transform: capitalize;
   font-size: 35px;
   font-weight: 300;
+}
+#bg-image {
+  background-image: url("https://i.postimg.cc/TYgMGrLL/celtic.png");
+}
+button {
+  background: #238636;
+  color: white;
+  border-radius: 1.4vw;
+  width: 8em;
+  height: 2.7em;
+  border-style: none;
+  border-radius: 2em;
+  font-size: 1.1vw;
+  margin-top: 0em;
+}
+
+.logo {
+  width: 50% !important;
 }
 .product {
   position: relative;
@@ -157,7 +168,7 @@ ul {
   list-style: none;
 }
 .footer {
-  background-color:#21262d;
+  background-color: #21262d;
   padding: 70px 0;
 }
 
@@ -213,7 +224,7 @@ ul {
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
-  color:white;
+  color: white;
   background-color: #238636;
 }
 
@@ -230,81 +241,6 @@ ul {
   }
 }
 
-/* dEMO FOOTER */
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #010409;
-  align-items: center;
-  color: white;
-}
-
-.footer1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  margin-top: 15px;
-}
-.social-media {
-  display: flex;
-  justify-content: center;
-  color: white;
-  flex-wrap: wrap;
-}
-.social-media a {
-  color: white;
-  margin: 20px;
-  border-radius: 5px;
-  margin-top: 10px;
-  color: white;
-}
-.social-media a ion-icon {
-  color: white;
-  background-color: black;
-}
-.social-media a:hover ion-icon {
-  color: red;
-  transform: translateY(5px);
-}
-.footer2 {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  text-decoration: none;
-  flex-wrap: wrap;
-}
-.footer0 {
-  font-weight: 1200;
-  transition-duration: 1s;
-}
-.footer0:hover {
-  color:  #238636; 
-}
-.footer2 .heading {
-  font-weight: 900;
-  font-size: 18px;
-}
-.footer3 {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer2 .heading:hover {
-  color: #238636;
-}
-.footer2 .div:hover {
-  transform: scale(1.05);
-}
-.footer3 h4 {
-  margin: 0 10px;
-}
-.footer2 div {
-  margin: 10px;
-}
 .menu {
   visibility: hidden;
 }
@@ -413,26 +349,7 @@ footer {
 
     padding-top: 10px;
   }
-  .menu ul li a {
-    text-decoration: none;
-    padding-top: 10px;
-    color: white;
-    font-weight: 900;
-  }
-  .menu ul li a:hover {
-    color: #238636;
-  }
-  .img-slider {
-    display: flex;
-    float: left;
-    position: relative;
-    width: 80%;
-    height: 60%;
-    animation-name: slide1;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    transition-duration: 2s;
-  }
+
   .section1 {
     width: 80%;
     overflow: hidden;
@@ -493,3 +410,61 @@ footer {
   }
 }
 /* eND OF DEMO FOOTER */
+/* Products */
+.banner {
+  width: 95%;
+  /* height: 20rem; */
+  background-color: #161b22 !important;
+  /* background-color: #010409 !important; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bannerContent {
+  width: 90%;
+  height: 90%;
+  /* background-color: black; */
+}
+
+.bannerContent img {
+  width: 400px;
+  aspect-ratio: 16/9;
+}
+/* End of products */
+/*  footer  */
+section {
+  background-color: #010409 !important;
+}
+#Facebook:hover {
+  color: rgb(2, 8, 120) !important;
+}
+#Twitter:hover {
+  color: skyblue !important;
+}
+#Instagram:hover {
+  color: purple !important;
+}
+#Github:hover {
+  color: green !important;
+}
+#Youtube:hover {
+  color: red !important;
+}
+#LinkedIn:hover {
+  color: blue !important;
+}
+.footer-container a {
+  color: white !important;
+  margin: 5px !important ;
+  padding: 5px !important;
+  font-size: x-large !important;
+}
+.social-icons a {
+  color: white !important;
+  margin: 5px !important ;
+  padding: 5px !important;
+  font-size: x-large !important;
+}
+/* footer */

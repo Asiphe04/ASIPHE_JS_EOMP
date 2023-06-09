@@ -16,14 +16,37 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- End of bootstrap -->
+    <!-- Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Footy Goods</title>
   </head>
   <body>
-   
     <header>
       <nav class="navbar position-sticky top-0 left-0 w-100">
         <div class="navbar d-flex">
-          <div class="circle-link">
+          <div class="circle-link bg-success">
             <a href="#">FG</a>
           </div>
           <h3 class="text-white">FOOTY GOODS STORE</h3>
@@ -46,72 +69,80 @@
         </div>
       </nav>
     </header>
-    <hr class="my-4 bg-black" />
     <!-- End of navbar -->
-
     <!-- pages links -->
-
-    <!-- <ul class="links-container w-100  d-flex justify-content-center list-unstyled">
-      <li class="link-item"><a href="#" class="link text-decoration-none">home</a></li>
-      <li class="link-item"><a href="#" class="link text-decoration-none">About</a></li>
-      <li class="link-item"><a href="#" class="link text-decoration-none">Products</a></li>
-      <li class="link-item"><a href="#" class="link text-decoration-none">Contact Us</a></li>
-    </ul> -->
+    <ul
+      class="links-container w-100 d-flex justify-content-center list-unstyled text-white"
+    >
+      <li class="link-item text-white">
+        <a href="#" class="link text-decoration-none text-white">home</a>
+      </li>
+      <li class="link-item justify-content-end">
+        <a href="#" class="link text-decoration-none text-white">Admin</a>
+      </li>
+      <li class="link-item">
+        <a href="#" class="link text-decoration-none text-white">Products</a>
+      </li>
+    </ul>
     <!-- end of pages links -->
     <!-- hero section -->
-    <!-- <header class="hero-section">
+    <div class="hero-section d-flex">
+      <div class="content col-6 m-4" id="bg-image"></div>
       <div class="content">
-        <img src="#" class="logo" alt="" />
-        <p class="sub-heading">best fashion collection of all time</p>
-      </div>
-    </header> -->
-    <!-- End of hero sections -->
-    <!-- Footer -->
-    <!-- <footer class="bg-black d-flex">
-      <div class="footer-content d-flex">
-        <img src="/images/samsung-galaxy-s23-ultra-google-apps.jpg" class="logo" alt="" />
-        <div class="footer-ul-container">
-          <ul class="category">
-            <li class="category-title">Our Categories:</li>
-            <li><a href="#" class="footer-link">On Sale</a></li>
-            <li><a href="#" class="footer-link">Computers</a></li>
-            <li><a href="#" class="footer-link">Laptops</a></li>
-            <li><a href="#" class="footer-link">iPhones</a></li>
-            <li><a href="#" class="footer-link">Drones</a></li>
-            <li><a href="#" class="footer-link">Cameras</a></li>
-            <li><a href="#" class="footer-link">Tablets</a></li>
-            <li><a href="#" class="footer-link">Routers</a></li>
-            <li><a href="#" class="footer-link">Speakers</a></li>
-            <li><a href="#" class="footer-link">Watches</a></li>
-          </ul>
-        </div>
-        <ul class="time">
-          <li class="category-title">Operating times:</li>
-          <li><p class="footer-link">Monday-Thursday : 08-30 - 17:30</p></li>
-          <li><p class="footer-link">Friday: 08:30 - 17:00</p></li>
-          
-          <li><p class="footer-link">Saturday-Sunday: 09:00 - 16:00</p></li>
-          
-          <li><p class="footer-link">Public Holiday: 09:30 - 14:30</p></li>
-        </ul>
-      
+        <p class="sub-heading">
+          Experience the power of performance with Footy Goods!
+        </p>
+        <p class="sub-heading">Best Football Brand since existence</p>
+        <button>Buy Now!</button>
       </div>
     </div>
-    <p class="footer-credit bg-dark">  Copyright &copy; 2023 All Rights Reserved by Asiphe Ndimlana</p>
+    <!-- End of hero sections -->
+    <!-- inside product section. -->
+    <br />
+    <br />
+    <h2 class="text-white text-center">TOP PICKED</h2>
+    <div class="banner container">
+      <div class="bannerContent">
+        <img
+          src="/images/samsung-galaxy-s23-ultra-google-apps.jpg"
+          alt=""
+          class="img-thumbnail"
+        />
       </div>
-    </footer>
-   -->
-    <!-- End of footer -->
-    <!-- <footer class="footer">
-
-        </div>
+      <div class="bannerContent">
+        <img
+          src="/images/samsung-galaxy-s23-ultra-google-apps.jpg"
+          alt=""
+          class="img-thumbnail"
+        />
       </div>
-    </footer> -->
-    <footer>
-      <h2>FOOTY GOODS STORE</h2>
-
+      <div class="bannerContent">
+        <img
+          src="/images/samsung-galaxy-s23-ultra-google-apps.jpg"
+          alt=""
+          class="img-thumbnail"
+        />
+      </div>
+      <div class="bannerContent">
+        <img
+          src="/images/samsung-galaxy-s23-ultra-google-apps.jpg"
+          alt=""
+          class="img-thumbnail"
+        />
+      </div>
+    </div>
+    <!-- end of products -->
+    <!-- <footer>
       <div class="footer1">
         <div class="footer2">
+          <div class="About-us">
+            <div class="heading">About Us</div>
+            <div>About</div>
+            <div>FAQ</div>
+            <div>Reviews</div>
+            <div>Conact Me</div>
+          </div>
+
           <div class="product">
             <div class="heading">Products</div>
             <div class="div">
@@ -131,32 +162,12 @@
               <a href="" class="text-decoration-none text-white">Trophies</a>
             </div>
           </div>
-          <div class="services">
-            <div class="heading">Services</div>
-            <div class="div">Return</div>
-            <div class="div">Cash Back</div>
-            <div class="div">Affiliate Marketing</div>
-            <div class="div">Others</div>
-          </div>
-          <div class="Company">
-            <div class="heading">Company</div>
-            <div class="div">About Us</div>
-            <div class="div">Our</div>
-            <div class="div">Affiliate</div>
-            <div class="div">Support</div>
-          </div>
-          <div class="Get Help">
-            <div class="heading">Get Help</div>
-            <div class="div">Help Center</div>
-            <div class="div">Privacy Policy</div>
-            <div class="div">Terms</div>
-            <div class="div">Login</div>
-          </div>
+
           <div class="Operating Times">
             <div class="heading">Operating Times</div>
-            <div class="div">Monday-Thursday : 08-30 - 17:30</div>
-            <div class="div">Friday: 08:30 - 17:00</div>
-            <div class="div">Saturday-Sunday: 09:00 - 16:00</div>
+            <div class="div">Mon-Thur : 08-30 - 17:30</div>
+            <div class="div">Fri: 08:30 - 17:00</div>
+            <div class="div">Sat-Sun: 09:00 - 16:00</div>
             <div class="div">Public Holiday: 09:30 - 14:30</div>
           </div>
           <div class="footer-col">
@@ -174,7 +185,37 @@
           Copyright &copy; 2023 All Rights Reserved by Asiphe Ndimlana
         </p>
       </div>
-    </footer>
+    </footer> -->
+    <section class="text-light py-3">
+      <hr class="my-4" />
+      <div class="footer-container text-center">
+        <p class="text-white">
+          Copyright &copy; 2023 All Rights Reserved by Asiphe Ndimlana
+        </p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=100089087082905"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/ndim_asiphe" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/ndimlanaasiphe/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://github.com/Asiphe04" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCg6ZJki0BX5SWIEuUShFlLA"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- End of footer -->
     <script src="/js/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
