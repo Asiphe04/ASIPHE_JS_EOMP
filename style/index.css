@@ -10,6 +10,7 @@ body {
 }
 /* Navbar */
 header {
+ 
   background-color: #161b22;
 }
 .circle-link {
@@ -165,7 +166,7 @@ header {
   border-radius: 5%;
 }
 .btn-see-more{
-  background: gray !important;
+  background: #232b36 !important;
  
   color: white !important;
   border-radius: 7% !important;
@@ -195,21 +196,28 @@ header {
   }
  
 }
-
-/* Media Query for 700px screen width */
-@media (max-width: 700px) {
-
-  .top-picks-items
-  {
-    width: 100%;
-    max-width: none;
-    min-width: none;
-  }
-
-  
+.top-picks-items:hover{
+  background: #161b22 !important;
 }
+
 /* End of products */
 /*  footer  */
+
+.email{
+  margin: 20px !important;
+}
+.send-btn{
+  background: #0d6efd;
+  color: white;
+  border-radius: 7% !important;
+  width: 8em;
+  height: 2.7em;
+  border-style: none;
+
+  margin: 20px !important;
+ 
+}
+
 section {
   background-color: #010409 !important;
 }
