@@ -51,7 +51,19 @@
           </div>
           <h3 class="text-white">FOOTY GOODS STORE</h3>
         </div>
-
+        <ul
+        class="links-container  d-flex justify-content-center list-unstyled text-white"
+      >
+        <li class="link-item text-white">
+          <a href="#" class="link text-decoration-none text-white">Home</a>
+        </li>
+        <li class="link-item justify-content-end">
+          <a href="#" class="link text-decoration-none text-white">Admin</a>
+        </li>
+        <li class="link-item">
+          <a href="#" class="link text-decoration-none text-white">Products</a>
+        </li>
+      </ul>
         <div class="nav d-flex justify-content-end ">
           <div class="nav-items d-flex align-items-center">
             <div class="search d-flex w-100">
@@ -71,19 +83,7 @@
     </header>
     <!-- End of navbar -->
     <!-- pages links -->
-    <ul
-      class="links-container w-100 d-flex justify-content-center list-unstyled text-white"
-    >
-      <li class="link-item text-white">
-        <a href="#" class="link text-decoration-none text-white">Home</a>
-      </li>
-      <li class="link-item justify-content-end">
-        <a href="#" class="link text-decoration-none text-white">Admin</a>
-      </li>
-      <li class="link-item">
-        <a href="#" class="link text-decoration-none text-white">Products</a>
-      </li>
-    </ul>
+
     <!-- end of pages links -->
     <!-- hero section -->
     <div class="hero-section d-flex">
@@ -102,38 +102,75 @@
     <hr class="my-4" />
     <h2 class="text-white text-center">TOP PICKED</h2>
     <div class="container text-center text-white">
-    <div class="top-picks-content row ">
-      <div class="top-picks-items col-3 ">
-       <img src="/images/samsung-galaxy-s23-ultra-google-apps.jpg" alt="" class="top-picks-img">
-       <p>Lorem iperferendisnus?
-        <br>
-        R 1 099. 99
-       </p>
-      
-       <button class="btn-add-to-cart btn">Add to Cart</button>
-       <button class="btn-see-more btn">See more</button>
+      <div class="top-picks-content row">
+        <div class="top-picks-items col-3">
+          <div class="img-container">
+            <img src="/ucl-trophy.jpg" alt="" class="top-picks-img">
+          </div>
+         
+          <p>Lorem iperferendisnus?
+            <br>
+            R 1 099. 99
+           </p>
+          <button class="btn-add-to-cart btn">Add to Cart</button>
+          <button class="btn-see-more btn" onclick="openPopup('popup1')">See more</button>
+        </div>
+        <div class="top-picks-items col-3">
+          <div class="img-container">
+            <img src="/ucl-trophy.jpg" alt="" class="top-picks-img">
+          </div>
+         
+          <p>Lorem iperferendisnus?
+            <br>
+            R 1 099. 99
+           </p>
+          <button class="btn-add-to-cart btn">Add to Cart</button>
+          <button class="btn-see-more btn" onclick="openPopup('popup2')">See more</button>
+        </div>
+        <div class="top-picks-items col-3">
+          <div class="img-container">
+            <img src="/ucl-trophy.jpg" alt="" class="top-picks-img">
+          </div>
+         
+          <p>Lorem iperferendisnus?
+            <br>
+            R 1 099. 99
+           </p>
+          <button class="btn-add-to-cart btn">Add to Cart</button>
+          <button class="btn-see-more btn" onclick="openPopup('popup3')">See more</button>
+        </div>
       </div>
-      <div class="top-picks-items col-3">
-        <img src="/images/samsung-galaxy-s23-ultra-google-apps.jpg" alt="" class="top-picks-img">
-        <p>Lorem iperferendisnus?
-          <br>
-          R 1 099. 99
-         </p>
-        <button class="btn-add-to-cart btn">Add to Cart</button>
-        <button class="btn-see-more btn">See more</button>
-       </div>
-       <div class="top-picks-items col-3">
-        <img src="/images/samsung-galaxy-s23-ultra-google-apps.jpg" alt="" class="top-picks-img">
-        <p>Lorem iperferendisnus?
-          <br>
-          R 1 099. 99
-         </p>
-        <button class="btn-add-to-cart btn">Add to Cart</button>
-        <button class="btn-see-more btn">See more</button>
-       </div>
-   
     </div>
-  </div>
+    
+    <!-- Popup 1 -->
+    <div id="popup1" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <h2>Additional Details 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat diam in sem tristique sodales.</p>
+        <button class="btn-add-to-cart btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <!-- Popup 2 -->
+    <div id="popup2" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <h2>Additional Details 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat diam in sem tristique sodales.</p>
+        <button class="btn-add-to-cart btn">Add to Cart</button>
+      </div>
+    </div>
+    
+    <!-- Popup 3 -->
+    <div id="popup3" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <h2>Additional Details 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat diam in sem tristique sodales.</p>
+        <button class="btn-add-to-cart btn">Add to Cart</button>
+      </div>
+    </div>
     
     <!-- end of products -->
   
@@ -148,12 +185,12 @@
     <div class="from-q text-center">
       <label>
         Name:
-        <input type="text" name="text" placeholder="e.g Oslin"  required="required">
+        <input type="text" name="text" placeholder="e.g Leonel Messi"  required="required">
       </label>
       
         <label class="email">
           Email:
-          <input type="email" name="email"  placeholder="oslin@example.com" >
+          <input type="email" name="email"  placeholder="messin@example.com" >
         </label> 
       <br>
           <label class="message ">
@@ -161,22 +198,13 @@
             <textarea name="message "  placeholder="Enter your message"></textarea>
           
           </label>
-          <br>
+       
           <button type="submit" class="send-btn ">Send</button>
           
    
      
     </form>
-  
-    <!-- <div
-    class="form-group floating-label-form-group controls mb-0 pb-2"
-  >
 
-  </div>
- 
-  </div>
-    <div class="col-lg-8 mx-auto">
-    </div> -->
      </div>
       <div class="footer-container text-center">
         <p class="text-white">
@@ -186,21 +214,21 @@
           <a
             href="https://www.facebook.com/profile.php?id=100089087082905"
             target="_blank"
-            ><i class="fa-brands fa-facebook"></i
+            ><i class="fa-brands fa-facebook" id="Facebook"></i
           ></a>
           <a href="https://twitter.com/ndim_asiphe" target="_blank"
-            ><i class="fa-brands fa-twitter"></i
+            ><i class="fa-brands fa-twitter" id="Twitter"></i
           ></a>
           <a href="https://www.instagram.com/ndimlanaasiphe/" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
+            ><i class="fa-brands fa-instagram" id="Instagram"></i
           ></a>
           <a href="https://github.com/Asiphe04" target="_blank"
-            ><i class="fa-brands fa-github"></i
+            ><i class="fa-brands fa-github" id="Github"></i
           ></a>
           <a
             href="https://www.youtube.com/channel/UCg6ZJki0BX5SWIEuUShFlLA"
             target="_blank"
-            ><i class="fa-brands fa-youtube"></i
+            ><i class="fa-brands fa-youtube" id="Youtube"></i
           ></a>
         </div>
       </div>
