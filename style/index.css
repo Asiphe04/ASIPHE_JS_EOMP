@@ -152,18 +152,17 @@ header {
 
 .top-picks-items{
   border: 1px solid white;
-  margin: 5px;
   padding: 5px;
   text-align: center;
   border-radius: 5%;
-  width: 85%;
-  max-width: 450px;
-  min-width: 350px;
+
 }
 .top-picks-img{
   width: 100%;
   padding: 5px;
   border-radius: 5%;
+  
+
 }
 .btn-see-more{
   background: #232b36 !important;

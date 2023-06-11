@@ -112,9 +112,7 @@
   }
   /* End of links */
   /* Products */
-  .top-picks-content{
-    height: min-content !important;
-  }
+
 .top-picks-items{
   border: 1px solid white;
   margin: 5px;
