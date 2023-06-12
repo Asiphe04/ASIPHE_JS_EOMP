@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/index.css" />
     <link rel="stylesheet" href="/style/about.css" />
-    <link rel="stylesheet" href="/style/products.css" />
+    <link rel="stylesheet" href="/style/contact.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -42,6 +42,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
     <title>Footy Goods</title>
   </head>
   <body>
@@ -85,75 +86,49 @@
         </div>
       </nav>
     </header>
-    <!-- End of navbar -->
+    <form action="https://formspree.io/f/mnqyeawg" method="POST">
+      <div
+        class="container text-center justify-content-center align-items-center"
+      >
+        <div class="row text-center justify-content-center align-items-center">
+          <label
+            >Name:
+            <br />
+            <input
+              type="text"
+              name="name"
+              required="required"
+              placeholder="eg. Asiphe"
+            />
+          </label>
+          <label>
+            Your email:
+            <br />
+            <input
+              type="email"
+              name="email"
+              required="required"
+              placeholder="yourname@example.com"
+            />
+          </label>
+          <label>
+            <br />
+            Your message:
+            <textarea
+              name="message"
+              required="required"
+              placeholder="Enter a message"
+            ></textarea>
+          </label>
 
-    <!-- inside product section. -->
-
-    <hr class="my-4" />
-    <h2 class="text-white text-center">T-Shirts</h2>
-    <div class="tShirts row m-0"></div>
-    <h2 class="text-white text-center">Soccer Boots</h2>
-    <div class="boots row m-0"></div>
-    <h2 class="text-white text-center">Trophies</h2>
-    <div class="trophies row m-0"></div>
-    <h2 class="text-white text-center">Match balls</h2>
-    <div class="balls row m-0"></div>
-
-    <!-- end of products -->
+          <button class="btn-add-to-cart btn" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
 
     <section class="text-light py-3">
       <hr class="my-4" />
-
       <div class="footer-container text-center">
-        <!-- CONTACT -->
-        <button class="btn-see-more btn" onclick="openPopup('popup4')">
-          Contact Us!
-        </button>
-        <br />
-        <br />
-        <!-- Popup 4 -->
-        <div id="popup4" class="popup">
-          <div class="popup-content">
-            <span class="close" onclick="closePopup('popup4')">&times;</span>
-            <h2>CONTACT US</h2>
-
-            <form action="https://formspree.io/f/xbjevvzd" method="POST">
-              <div class="from-q text-center">
-                <label>
-                  Name:
-                  <input
-                    type="text"
-                    name="text"
-                    placeholder="e.g Leonel"
-                    required="required"
-                  />
-                </label>
-
-                <label class="email">
-                  Email:
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="messin@example.com"
-                    required="required"
-                  />
-                </label>
-                <br />
-                <label>
-                  Message:
-                  <textarea
-                    name="message "
-                    placeholder="Enter your message"
-                    required="required"
-                  ></textarea>
-                </label>
-
-                <button type="submit" class="send-btn">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- END OF CONTACT -->
         <p class="text-white">
           Copyright &copy; 2023 All Rights Reserved by Footy Store
         </p>
@@ -181,7 +156,9 @@
       </div>
     </section>
     <!-- End of footer -->
+    <script src="/js/index.js"></script>
     <script src="/js/products.js"></script>
+    <script src="/js/about.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

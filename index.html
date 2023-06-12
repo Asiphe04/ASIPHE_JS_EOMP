@@ -40,7 +40,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    
+
     <title>Footy Goods</title>
   </head>
   <body>
@@ -53,19 +53,21 @@
           <h3 class="text-white">FOOTY GOODS STORE</h3>
         </div>
         <ul
-        class="links-container  d-flex justify-content-center list-unstyled text-white"
-      >
-        <li class="link-item text-white">
-          <a href="#" class="link text-decoration-none text-white">Home</a>
-        </li>
-        <li class="link-item justify-content-end">
-          <a href="#" class="link text-decoration-none text-white">Admin</a>
-        </li>
-        <li class="link-item">
-          <a href="#" class="link text-decoration-none text-white">Products</a>
-        </li>
-      </ul>
-        <div class="nav d-flex justify-content-end ">
+          class="links-container d-flex justify-content-center list-unstyled text-white"
+        >
+          <li class="link-item text-white">
+            <a href="#" class="link text-decoration-none text-white">Home</a>
+          </li>
+          <li class="link-item justify-content-end">
+            <a href="#" class="link text-decoration-none text-white">Admin</a>
+          </li>
+          <li class="link-item">
+            <a href="#" class="link text-decoration-none text-white"
+              >Products</a
+            >
+          </li>
+        </ul>
+        <div class="nav d-flex justify-content-end">
           <div class="nav-items d-flex align-items-center">
             <div class="search d-flex w-100">
               <input
@@ -83,13 +85,10 @@
       </nav>
     </header>
     <!-- End of navbar -->
-    <!-- pages links -->
-
-    <!-- end of pages links -->
     <!-- hero section -->
     <div class="hero-section d-flex">
       <div class="content col-6 m-2" id="bg-image"></div>
-      <div class="content " id="sec-hero">
+      <div class="content" id="sec-hero">
         <p class="sub-heading">
           Experience the power of performance with Footy Goods!
         </p>
@@ -99,114 +98,165 @@
     </div>
     <!-- End of hero sections -->
     <!-- inside product section. -->
-   
+
     <hr class="my-4" />
     <h2 class="text-white text-center">TOP PICKS</h2>
     <div class="container text-center text-white">
       <div class="top-picks-content row">
         <div class="top-picks-items col-4">
           <div class="img-container">
-            <img src="/ucl-trophy.jpg" alt="" class="top-picks-img">
+            <img
+              src="https://i.postimg.cc/t4Mkwnhx/suntec.jpg"
+              alt=""
+              class="top-picks-img"
+            />
           </div>
-         
-          <p>Lorem iperferendisnus?
-            <br>
+
+          <p>
+            Lorem iperferendisnus?
+            <br />
             R 1 099. 99
-           </p>
+          </p>
           <button class="btn-add-to-cart btn">Add to Cart</button>
-          <button class="btn-see-more btn" onclick="openPopup('popup1')">See more</button>
+          <button class="btn-see-more btn" onclick="openPopup('popup1')">
+            See more
+          </button>
         </div>
         <div class="top-picks-items col-4">
           <div class="img-container">
-            <img src="/ucl-trophy.jpg" alt="" class="top-picks-img">
+            <img
+              src="https://i.postimg.cc/wTF05GMF/nike.jpg"
+              alt=""
+              class="top-picks-img"
+            />
           </div>
-         
-          <p>Lorem iperferendisnus?
-            <br>
+
+          <p>
+            Lorem iperferendisnus?
+            <br />
             R 1 099. 99
-           </p>
+          </p>
           <button class="btn-add-to-cart btn">Add to Cart</button>
-          <button class="btn-see-more btn" onclick="openPopup('popup2')">See more</button>
+          <button class="btn-see-more btn" onclick="openPopup('popup2')">
+            See more
+          </button>
         </div>
         <div class="top-picks-items col-4">
           <div class="img-container">
-            <img src="/ucl-trophy.jpg" alt="" class="top-picks-img">
+            <img
+              src="https://i.postimg.cc/9FcL7hmr/lotto.jpg"
+              alt=""
+              class="top-picks-img"
+            />
           </div>
-         
-          <p>Lorem iperferendisnus?
-            <br>
+
+          <p>
+            Lorem iperferendisnus?
+            <br />
             R 1 099. 99
-           </p>
+          </p>
           <button class="btn-add-to-cart btn">Add to Cart</button>
-          <button class="btn-see-more btn" onclick="openPopup('popup3')">See more</button>
+          <button class="btn-see-more btn" onclick="openPopup('popup3')">
+            See more
+          </button>
         </div>
       </div>
     </div>
-    
+
     <!-- Popup 1 -->
     <div id="popup1" class="popup">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup1')">&times;</span>
         <h2>Additional Details 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat diam in sem tristique sodales.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          consequat diam in sem tristique sodales.
+        </p>
         <button class="btn-add-to-cart btn">Add to Cart</button>
       </div>
     </div>
-    
+
     <!-- Popup 2 -->
     <div id="popup2" class="popup">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup2')">&times;</span>
         <h2>Additional Details 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat diam in sem tristique sodales.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          consequat diam in sem tristique sodales.
+        </p>
         <button class="btn-add-to-cart btn">Add to Cart</button>
       </div>
     </div>
-    
+
     <!-- Popup 3 -->
     <div id="popup3" class="popup">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup3')">&times;</span>
         <h2>Additional Details 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat diam in sem tristique sodales.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          consequat diam in sem tristique sodales.
+        </p>
         <button class="btn-add-to-cart btn">Add to Cart</button>
       </div>
     </div>
-    
+    <br />
     <!-- end of products -->
 
     <section class="text-light py-3">
       <hr class="my-4" />
-    
-      <form
-      action="https://formspree.io/f/xbjevvzd"
-      method="POST"
-    >
-    <div class="from-q text-center">
-      <label>
-        Name:
-        <input type="text" name="text" placeholder="e.g Leonel"  required="required">
-      </label>
-      
-        <label class="email">
-          Email:
-          <input type="email" name="email"  placeholder="messin@example.com"  required="required" >
-        </label> 
-      <br>
-          <label class="message ">
-            Message:
-            <textarea name="message "  placeholder="Enter your message"  required="required"></textarea>
-          
-          </label>
-       
-          <button type="submit" class="send-btn ">Send</button>
-          
-   
-     
-    </form>
 
-     </div>
       <div class="footer-container text-center">
+        <!-- CONTACT -->
+        <button class="btn-see-more btn" onclick="openPopup('popup4')">
+          Contact Us!
+        </button>
+        <br />
+        <br />
+        <!-- Popup 4 -->
+        <div id="popup4" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup('popup4')">&times;</span>
+            <h2>CONTACT US</h2>
+
+            <form action="https://formspree.io/f/xbjevvzd" method="POST">
+              <div class="from-q text-center">
+                <label>
+                  Name:
+                  <input
+                    type="text"
+                    name="text"
+                    placeholder="e.g Leonel"
+                    required="required"
+                  />
+                </label>
+
+                <label class="email">
+                  Email:
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="messin@example.com"
+                    required="required"
+                  />
+                </label>
+                <br />
+                <label>
+                  Message:
+                  <textarea
+                    name="message "
+                    placeholder="Enter your message"
+                    required="required"
+                  ></textarea>
+                </label>
+
+                <button type="submit" class="send-btn">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END OF CONTACT -->
         <p class="text-white">
           Copyright &copy; 2023 All Rights Reserved by Footy Store
         </p>

@@ -118,6 +118,7 @@ header {
   height: 350px;
   background-size: cover;
   justify-content: center;
+  background-repeat: no-repeat;
 }
 .hero-section .sub-heading {
 
@@ -161,8 +162,6 @@ header {
   width: 100%;
   padding: 5px;
   border-radius: 5%;
-  
-
 }
 .btn-see-more{
   background: #232b36 !important;

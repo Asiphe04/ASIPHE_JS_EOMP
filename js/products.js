@@ -1,50 +1,49 @@
-
 //Balls
 
 let balls = [
   {
     id: 1,
-        img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
-        itemName: "EPL Match Ball",
-        desc: "The 22/23 season match ball of the premier league",
-        price: 500, 
+    img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
+    itemName: "UCL ball",
+    desc: "Adidas UCL traning ball for the 22/23 season",
+    price: 799.99,
   },
   {
     id: 2,
-        img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
-        itemName: "EPL Match Ball",
-        desc: "The 22/23 season match ball of the premier league",
-        price: 500, 
+    img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
+    itemName: "Moldel UEL ball",
+    desc: "Moldel UEL match ball for the 22/23 season",
+    price: 499.99,
   },
   {
     id: 3,
-        img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
-        itemName: "EPL Match Ball",
-        desc: "The 22/23 season match ball of the premier league",
-        price: 500, 
+    img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
+    itemName: "Moldel Uefa Conference ball",
+    desc: "Moldel Uefa conference ball for the 22/23 season",
+    price: 299.99,
   },
   {
     id: 4,
-        img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
-        itemName: "EPL Match Ball",
-        desc: "The 22/23 season match ball of the premier league",
-        price: 500, 
+    img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
+    itemName: "EPL Match Ball",
+    desc: "The 22/23 season match ball of the premier league",
+    price: 450.0,
   },
   {
     id: 5,
-        img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
-        itemName: "EPL Match Ball",
-        desc: "The 22/23 season match ball of the premier league",
-        price: 500, 
+    img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
+    itemName: "PSL Match Ball",
+    desc: "The 22/23 season match ball of the premier soccer league, also known as the DSTV Premiership",
+    price: 149.99,
   },
   {
     id: 6,
-        img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
-        itemName: "EPL Match Ball",
-        desc: "The 22/23 season match ball of the premier league",
-        price: 500, 
-  }
-]
+    img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
+    itemName: "Laliga Match Ball",
+    desc: "The 22/23 season match ball of the LaLiga",
+    price: 350.0,
+  },
+];
 let dispballs = document.querySelector(".balls");
 
 balls.forEach((data) => {
@@ -69,44 +68,44 @@ let trophies = [
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500,
+    price: 4499.99,
   },
   {
     id: 2,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500,
+    itemName: "EPL",
+    desc: "The best league in the world, the most watched league in the world.",
+    price: 4500.8,
   },
   {
     id: 3,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500,
+    itemName: "UEL",
+    desc: "The trophy that blongs to Sevilla, as they have won it more than 5 times - so you would say they are the Real Madri of Europa",
+    price: 2799.99,
   },
   {
     id: 4,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500,
+    itemName: "Uefa Conference League",
+    desc: "Trophy was previously won by one of the greatest managers of all time - Jose Mourinho",
+    price: 1999.99,
   },
   {
     id: 5,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500,
+    itemName: "PSL",
+    desc: "The most competitive league in Africa, well not anymore because Sundowns has won it more than 5 times in a row",
+    price: 2300,
   },
   {
     id: 6,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
+    itemName: "La Liga",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500,
+    price: 3500.0,
   },
-]
+];
 
 let dispTrophies = document.querySelector(".trophies");
 
@@ -124,51 +123,50 @@ trophies.forEach((data) => {
   </div>`;
 });
 
-let boots =[
+let boots = [
   {
     id: 1,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 2,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 3,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 4,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 5,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 6,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
-
-]
+];
 let dispBoots = document.querySelector(".boots");
 
 boots.forEach((data) => {
@@ -189,46 +187,46 @@ let tShirts = [
   {
     id: 1,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    itemName: "Arsenal Home",
+    desc: "The kit of the best football club in the world",
+    price: 1599.99,
   },
   {
     id: 2,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    itemName: "BVB Home",
+    desc: "Dortmund will never dissapoint with their kits",
+    price: 999.99,
   },
   {
     id: 3,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
-    itemName: "UCL",
-    desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    itemName: "Liverpool",
+    desc: "",
+    price: 500,
   },
   {
     id: 4,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 5,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
   {
     id: 6,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 500, 
+    price: 500,
   },
-]
+];
 let dispTshirts = document.querySelector(".tShirts");
 
 tShirts.forEach((data) => {
