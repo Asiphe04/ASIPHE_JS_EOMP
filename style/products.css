@@ -125,11 +125,10 @@
 
   }
   .top-picks-img{
-    /* width: 324px; */
     height: 186px;
     width: 100%;
     padding: 5px;
-    border-radius: 5%;
+    border-radius: 5% !important;
     /* object-fit: contain !important; */
   }
   .btn-see-more{

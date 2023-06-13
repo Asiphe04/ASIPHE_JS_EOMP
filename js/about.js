@@ -2,7 +2,7 @@
 let partners = [
   {
     id: 1,
-    img: "https://i.postimg.cc/mg5LGCBg/nike-logo-removebg-preview.png",
+    img: "https://i.postimg.cc/KY2k2t3n/puma3-removebg-preview.png",
   },
   {
     id: 2,

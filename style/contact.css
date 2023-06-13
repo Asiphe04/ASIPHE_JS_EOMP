@@ -2,7 +2,7 @@
 input[type="text"],[type="email"],
 select,
 textarea {
-  width: 100%; /* Full width */
+  width: 5100; /* Full width */
   padding: 12px; /* Some padding */
   border: 1px solid #0cd1c7; /* Gray border */
   border-radius: 4px; /* Rounded borders */

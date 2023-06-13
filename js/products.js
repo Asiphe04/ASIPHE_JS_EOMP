@@ -27,7 +27,7 @@ let balls = [
     img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
     itemName: "EPL Match Ball",
     desc: "The 22/23 season match ball of the premier league",
-    price: 450.0,
+    price: 450.99,
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ let balls = [
     img: "https://i.postimg.cc/Hx7hB4Rn/epl-ball.jpg",
     itemName: "Laliga Match Ball",
     desc: "The 22/23 season match ball of the LaLiga",
-    price: 350.0,
+    price: 350.99,
   },
 ];
 let dispballs = document.querySelector(".balls");
@@ -75,13 +75,13 @@ let trophies = [
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "EPL",
     desc: "The best league in the world, the most watched league in the world.",
-    price: 4500.8,
+    price: 4500.88,
   },
   {
     id: 3,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "UEL",
-    desc: "The trophy that blongs to Sevilla, as they have won it more than 5 times - so you would say they are the Real Madri of Europa",
+    desc: "The trophy that belongs to Sevilla, as they have won it more than 5 times - so you would say they are the Real Madri of Europa",
     price: 2799.99,
   },
   {
@@ -96,14 +96,14 @@ let trophies = [
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "PSL",
     desc: "The most competitive league in Africa, well not anymore because Sundowns has won it more than 5 times in a row",
-    price: 2300,
+    price: 2300.89,
   },
   {
     id: 6,
     img: "https://i.postimg.cc/SKzHdQq2/ucl-trophy.jpg",
     itemName: "La Liga",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
-    price: 3500.0,
+    price: 3500.99,
   },
 ];
 
