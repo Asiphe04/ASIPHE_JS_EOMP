@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -88,6 +89,9 @@ header {
   }
   .search {
     max-width: 100%; /* Allow full width on smaller screens */
+  }
+  select{
+    width: 120px;
   }
 }
 /* End of navbar */
@@ -187,9 +191,19 @@ header {
 
   margin: 20px !important;
 }
+#sort-select{
+  background-color: #161b22;
+  color: white;
+  border-radius: 3% !important;
+  border:none !important;
+  height: 40px;
+  margin: 10px ;
+}
+
 
 section {
   background-color: #010409 !important;
+ 
 }
 #Facebook:hover {
   color: rgb(2, 8, 120) !important;
@@ -238,7 +252,6 @@ section {
   background: none;
   cursor: pointer;
   border: none;
-  font-family: inherit;
   text-transform: uppercase;
   display: inline-block;
   margin: 10px 30px;
@@ -267,7 +280,7 @@ section {
   transition: all 0.2s ease-in-out;
 }
 .filter-btn:hover {
-  color: #555;
+  color: #238636;
 }
 .filter-btn:hover::after {
   width: 100%;
@@ -280,4 +293,4 @@ section {
   width: 100%;
 }
 /*  */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+

@@ -1,27 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
 /* Style inputs with type="text", select elements and textareas */
-input[type="text"],
-[type="email"],
+
+input[type="text"],[type="email"],
 select,
 textarea {
-  width: 500px;
-  padding: 12px;
-  border: 1px solid #0cd1c7;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+  width : 500px !important;
+  padding: 12px; /* Some padding */
+  border: 1px solid #0cd1c7; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-@media (max-width: 767px) {
-  /* Adjustments for smaller screens */
-  input[type="text"],
-  [type="email"],
+/* Media Query */
+@media screen and (max-width: 767px) {
+  input[type="text"],[type="email"],
   select,
   textarea {
-    width: 100%; /* Full width */
-  }
-  .contact-link {
-    display: none;
+  width: 100% !important;
   }
 }
 

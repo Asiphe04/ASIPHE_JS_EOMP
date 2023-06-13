@@ -115,12 +115,20 @@
     <!-- inside product section. -->
 
     <hr class="my-4" />
-    <div class = "filter-btns">
-      <button type = "button" class = "filter-btn" id = "all">all</button>
-      <button type = "button" class = "filter-btn" id = "new">new</button>
-      <button type = "button" class = "filter-btn" id = "best-sellers">best seller</button>
-      <button type = "button" class = "filter-btn" id = "specials">specials</button>
+    
+  <div class="filter-btns">
+    <button type="button" class="filter-btn" id="all" data-filter="all">all</button>
+    <button type="button" class="filter-btn" id="new" data-filter="new">new</button>
+    <button type="button" class="filter-btn" id="best-sellers" data-filter="best-sellers">best seller</button>
+    <button type="button" class="filter-btn" id="specials" data-filter="specials">specials</button>
   </div>
+  <select id="sort-select">
+    <option >Sort options</option>
+    <option value="alphabetical">Sort Alphabetically</option>
+    <option value="price-high">Sort by Price (High to Low)</option>
+    <option value="price-low">Sort by Price (Low to High)</option>
+  </select>
+  
     <br />
     <h2 class="text-white text-center">T-Shirts</h2>
     <div class="tShirts row m-0"></div>
