@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 body {
   background-color: #010409 !important;
@@ -75,6 +75,34 @@ header {
 }
 .nav-items a img {
   width: 30px;
+}
+/* Media Query */
+@media screen and (max-width: 767px) {
+  .products-link {
+    display: none;
+  }
+  .about-link {
+    display: none;
+  }
+  .paragraph-founder {
+    display: none;
+  }
+  .circle-link {
+    display: none;
+  }
+
+  h3 {
+    display: none;
+  }
+  .search-btn {
+    display: none;
+  }
+  .nav {
+    justify-content: center;
+  }
+  .search-box {
+    display: none;
+  }
 }
 /* Hero section */
 .hero-section {
@@ -189,4 +217,7 @@ header {
   .employees img {
     width: 50%;
   }
+}
+.partners {
+  overflow: hidden;
 }

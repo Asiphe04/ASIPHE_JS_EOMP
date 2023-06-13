@@ -57,14 +57,30 @@
           class="links-container d-flex justify-content-center list-unstyled text-white"
         >
           <li class="link-item text-white">
-            <a href="#" class="link text-decoration-none text-white">Home</a>
+            <a href="/index.html" class="link text-decoration-none text-white"
+              >Home</a
+            >
           </li>
-          <li class="link-item justify-content-end">
-            <a href="#" class="link text-decoration-none text-white">Admin</a>
+          <li class="link-item text-white">
+            <a
+              href="/pages/about.html"
+              class="about-link link text-decoration-none text-white"
+              >About</a
+            >
+          </li>
+
+          <li class="link-item">
+            <a
+              href="/pages/products.html"
+              class="link text-decoration-none text-white"
+              >Products</a
+            >
           </li>
           <li class="link-item">
-            <a href="#" class="link text-decoration-none text-white"
-              >Products</a
+            <a
+              href="/pages/contact.html"
+              class="link text-decoration-none text-white"
+              >Contact</a
             >
           </li>
         </ul>
@@ -80,7 +96,16 @@
                 search
               </button>
             </div>
-            <a href="#"><img src="/images/cart.png" alt="Cart-img" /></a>
+            <a href="#"
+              ><img
+                src="https://i.postimg.cc/ydw2YnDn/admin3-removebg-preview.png"
+                alt="Cart-img"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://i.postimg.cc/qMmLt28d/cart2-removebg-preview.png"
+                alt="Cart-img"
+            /></a>
           </div>
         </div>
       </nav>
@@ -101,7 +126,7 @@
           accessories in vibrant hues, Celebrate your team and wear your loyalty
           true.
         </p>
-        <p>
+        <p class="paragraph-founder">
           But it's not just about fandom, there's more in store, Footy Goods
           offers gear for players to explore. Balls, boots, and training
           equipment galore, Helping players excel and improve even more. From
@@ -126,7 +151,7 @@
               class="top-picks-img"
             />
             <h3>ASIPHE NDIMLANA</h3>
-            <p class="text-start">
+            <p class="paragraph-founder text-start">
               Asiphe grew up in Butterworth, Eastern Cape wherby he later on
               moved to Cape Town to find employment. After 2 years of not
               finding employment, he then went to Argentina whereby he mest Leo.
@@ -143,7 +168,7 @@
               class="top-picks-img"
             />
             <h3>LEO MESSI</h3>
-            <p class="text-start">
+            <p class="paragraph-founder text-start">
               Leo grew up in Rosario, Argentina wherby he was studying business
               and was playing football part-time . His family was owning a
               business, so thats where the passion for starting a fooball came
@@ -158,14 +183,44 @@
 
     <!-- PARTNERS -->
     <h2 class="text-center">Official Partners</h2>
-    <div class="partners d-flex justify-content-center flex-wrap"></div>
+    <div class="partners d-flex justify-content-center flex-wrap">
+      <!-- Carousel -->
+      <div
+        id="demo"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-interval="3000"
+      >
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-item-first active"></div>
+          <div class="carousel-item carousel-item-second"></div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
     <!-- END OF PARTNERS -->
     <section class="text-light py-3">
       <hr class="my-4" />
 
       <div class="footer-container text-center">
-       
- 
         <p class="text-white">
           Copyright &copy; 2023 All Rights Reserved by Footy Store
         </p>
