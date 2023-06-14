@@ -90,7 +90,7 @@ header {
   .search {
     max-width: 100%; /* Allow full width on smaller screens */
   }
-  select{
+  select {
     width: 120px;
   }
 }
@@ -191,19 +191,17 @@ header {
 
   margin: 20px !important;
 }
-#sort-select{
+#sort-select {
   background-color: #161b22;
   color: white;
   border-radius: 3% !important;
-  border:none !important;
+  border: none !important;
   height: 40px;
-  margin: 10px ;
+  margin: 10px;
 }
-
 
 section {
   background-color: #010409 !important;
- 
 }
 #Facebook:hover {
   color: rgb(2, 8, 120) !important;
@@ -293,4 +291,137 @@ section {
   width: 100%;
 }
 /*  */
+/* cart section */
 
+.cart_container {
+  height: 100vh;
+  width: 500px;
+  position: fixed;
+  background-color: #010409 !important;
+  color: white;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  right: -500px;
+  transition: 0.5s ease-in;
+}
+
+.cart_container.active {
+  right: 0;
+}
+
+.close_icon {
+  position: absolute;
+  right: 10;
+  top: 10;
+  color: gray;
+  cursor: pointer;
+}
+
+.cart_container_title {
+  display: grid;
+  place-content: center;
+  margin-top: 3em;
+}
+
+.cartProduct,
+.cart_product_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.cart_product_img,
+.cart_product_title {
+  margin: 0 0.5em;
+}
+
+.cart_img {
+  width: 30px;
+  height: 30px;
+}
+
+.bxs-trash-alt {
+  font-size: 20px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.bxs-trash-alt:hover {
+  color: #c40909;
+}
+
+.cart_amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decrement,
+.increment {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.cartTotalPrice {
+  text-align: center;
+  margin: 2em 0 0 0;
+}
+
+.clearCart {
+  margin: 2em 0;
+  text-align: center;
+  cursor: pointer;
+}
+.btn_clear {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f12a12;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn_clear:hover {
+  background-color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .nav_title {
+    font-size: 10px;
+  }
+  .nav_bag {
+    font-size: 20px;
+  }
+  .items {
+    font-size: 15px;
+  }
+  .cart_container {
+    width: 330px;
+  }
+  .cart_product_title,
+  .cart_product_price {
+    font-size: 13px;
+  }
+}
+nav {
+  color: white !important;
+}
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  margin: 5px !important;
+  padding: 5px !important;
+  gap: 10px !important;
+
+  list-style: none !important;
+}
+.nav-link {
+  text-decoration: none !important;
+  color: white !important;
+}
+.nav-link:hover {
+  color: blue !important;
+}

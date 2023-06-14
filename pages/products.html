@@ -101,43 +101,96 @@
                 src="https://i.postimg.cc/ydw2YnDn/admin3-removebg-preview.png"
                 alt="Cart-img"
             /></a>
-            <a href="#"
+            <a href="#" class="nav_bag"
               ><img
                 src="https://i.postimg.cc/qMmLt28d/cart2-removebg-preview.png"
-                alt="Cart-img"
+                alt="Cart-img" class="nav_bag"
             /></a>
           </div>
         </div>
       </nav>
+           <!-- cart section -->
+           <section>
+            <div class="cart_container">
+              <div class="cart_close_icon">
+                <p class="close_icon" id="close_icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.5rem"
+                    height="1.5rem"
+                    fill="currentColor"
+                    class="catIcon"
+                    viewbox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
+                    />
+                  </svg>
+                </p>
+              </div>
+    
+              <div class="cart_container_title">
+                <h2 class="cart">Your Cart</h2>
+              </div>
+    
+              <div class="cart_products"></div>
+    
+              <div class="cartTotalPrice">
+                <h2 class="totalPrice"></h2>
+              </div>
+    
+              <div class="clearCart">
+                <button class="btn_clear">Clear Cart</button>
+              </div>
+            </div>
+          </section>
     </header>
     <!-- End of navbar -->
 
     <!-- inside product section. -->
 
     <hr class="my-4" />
-    
-  <div class="filter-btns">
-    <button type="button" class="filter-btn" id="all" data-filter="all">all</button>
-    <button type="button" class="filter-btn" id="new" data-filter="new">new</button>
-    <button type="button" class="filter-btn" id="best-sellers" data-filter="best-sellers">best seller</button>
-    <button type="button" class="filter-btn" id="specials" data-filter="specials">specials</button>
-  </div>
-  <select id="sort-select">
-    <option >Sort options</option>
-    <option value="alphabetical">Sort Alphabetically</option>
-    <option value="price-high">Sort by Price (High to Low)</option>
-    <option value="price-low">Sort by Price (Low to High)</option>
-  </select>
-  
+
+    <div class="filter-btns">
+      <button type="button" class="filter-btn" id="all" data-filter="all">
+        all
+      </button>
+      <button type="button" class="filter-btn" id="Ball" data-filter="Ball">
+        Balls
+      </button>
+      <button
+        type="button"
+        class="filter-btn"
+        id="tShirts"
+        data-filter="tShirts"
+      >
+        T-Shirts
+      </button>
+      <button type="button" class="filter-btn" id="Boots" data-filter="Boots">
+        Soccer Boots
+      </button>
+      <button
+        type="button"
+        class="filter-btn"
+        id="Trophies"
+        data-filter="Trophies"
+      >
+        Trophies
+      </button>
+    </div>
+    <select id="sort-select">
+      <option>Sort options</option>
+      <option value="alphabetical">Sort Alphabetically</option>
+      <option value="price-high">Sort by Price (High to Low)</option>
+      <option value="price-low">Sort by Price (Low to High)</option>
+    </select>
+
     <br />
-    <h2 class="text-white text-center">T-Shirts</h2>
-    <div class="tShirts row m-0"></div>
-    <h2 class="text-white text-center">Soccer Boots</h2>
-    <div class="boots row m-0"></div>
-    <h2 class="text-white text-center">Trophies</h2>
-    <div class="trophies row m-0"></div>
-    <h2 class="text-white text-center">Match balls</h2>
-    <div class="balls row m-0"></div>
+    
+    <div class="products_title">
+      <h2 class="title">Our Products</h2>
+    </div>
+    <div class="products_container row m-0"></div>
 
     <!-- end of products -->
 
