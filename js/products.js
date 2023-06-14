@@ -241,9 +241,14 @@ function renderProducts() {
   products.forEach((product) => {
     const { id, itemName, desc, img, price, category, numberOfUnits } = product;
     const productEl = document.createElement("div");
+    productEl.classList.add("top-picks-items"); 
+    productEl.classList.add("col-3"); 
+    productEl.classList.add("container");
+    productEl.classList.add("add");
+    productEl.classList.add(`${category}`);
     productEl.innerHTML = `
     
-        <div class="top-picks-items col-3 container all ${category}">
+       
         <div class="img-container">
             <img src="${img}" alt="${itemName}" class="top-picks-img">
             
@@ -257,8 +262,8 @@ function renderProducts() {
           <h2>${itemName}</h2>
           <p>${desc}</p>
           <button class="btn-add-to-cart btn">Add to Cart</button>
+       
         </div>
-      </div>
     
     </div>
         `;
@@ -401,7 +406,7 @@ function closePopup(popupId) {
   const popup = document.getElementById(popupId);
   popup.style.display = "none";
 }
-
+//FILTER
 const allFilterItems = document.querySelectorAll(".top-picks-items");
 const allFilterBtns = document.querySelectorAll(".filter-btn");
 
@@ -527,20 +532,12 @@ function sortItemsByPriceLowToHigh() {
 }
 
 function displaySortedItems(sortedItems) {
-  const dispBalls = document.querySelector(".products_container");
-  // const dispTrophies = document.querySelector(".trophies");
-  // const dispBoots = document.querySelector(".boots");
-  // const dispTshirts = document.querySelector(".tShirts");
+  const dispProducts = document.querySelector(".products_container");
+
 
   sortedItems.forEach((item) => {
-    if (dispBalls.contains(item)) {
-      dispBalls.appendChild(item);
-    } else if (dispTrophies.contains(item)) {
-      dispTrophies.appendChild(item);
-    } else if (dispBoots.contains(item)) {
-      dispBoots.appendChild(item);
-    } else if (dispTshirts.contains(item)) {
-      dispTshirts.appendChild(item);
-    }
+    if (dispProducts.contains(item)) {
+      dispProducts.appendChild(item);
+    } 
   });
 }
