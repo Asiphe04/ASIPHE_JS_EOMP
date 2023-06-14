@@ -242,7 +242,7 @@ function renderProducts() {
     const { id, itemName, desc, img, price, category, numberOfUnits } = product;
     const productEl = document.createElement("div");
     productEl.innerHTML = `
-    <div class="products_container row m-0">
+    
         <div class="top-picks-items col-3 container all ${category}">
         <div class="img-container">
             <img src="${img}" alt="${itemName}" class="top-picks-img">
@@ -259,7 +259,7 @@ function renderProducts() {
           <button class="btn-add-to-cart btn">Add to Cart</button>
         </div>
       </div>
-      </div>
+    
     </div>
         `;
 
