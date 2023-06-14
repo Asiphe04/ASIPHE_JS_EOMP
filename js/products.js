@@ -13,7 +13,10 @@ cartEl.addEventListener("click", () => {
 closeCart.addEventListener("click", () => {
   cartContainer.classList.remove("active");
 });
-let products = [
+
+let products = JSON.parse(localStorage.getItem('item')) ?
+JSON.parse(localStorage.getItem('item')): 
+ [
   {
     id: 1,
     img: "https://i.postimg.cc/m210H58y/adidas-ucl-trainig-removebg-preview.png",
@@ -21,6 +24,7 @@ let products = [
     desc: "Adidas UCL training ball for the 22/23 season",
     price: 799.99,
     category: "Ball",
+    quantity: 22,
   },
   {
     id: 2,
@@ -29,7 +33,7 @@ let products = [
     desc: "Moldel UEL match ball for the 22/23 season",
     price: 499.99,
     category: "Ball",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 3,
@@ -38,7 +42,7 @@ let products = [
     desc: "Moldel Uefa conference ball for the 22/23 season",
     price: 299.99,
     category: "Ball",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 4,
@@ -47,7 +51,7 @@ let products = [
     desc: "The 22/23 season match ball of the Premier League",
     price: 450.99,
     category: "Ball",
-    numberOfUnits: 11,
+    quantity: 22,
   },
  
   {
@@ -57,7 +61,7 @@ let products = [
     desc: "The 22/23 season match ball of LaLiga",
     price: 350.99,
     category: "Ball",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 7,
@@ -66,17 +70,16 @@ let products = [
     desc: "The most valuable club trophy , even 99% of football players would say so.",
     price: 4499.99,
     category: "Trophies",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 8,
     img: "https://i.postimg.cc/02WL3pZ1/epl-removebg-preview.png",
     itemName: "EPL",
     desc: "The best league in the world, the most watched league in the world.",
-    oldPrice: 10000.99,
     price: 4500.88,
     category: "Trophies",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 9,
@@ -85,7 +88,7 @@ let products = [
     desc: "The trophy that belongs to Sevilla, as they have won it more than 5 times - so you would say they are the Real Madri of Europa",
     price: 2799.99,
     category: "Trophies",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 10,
@@ -94,7 +97,7 @@ let products = [
     desc: "Trophy was previously won by one of the greatest managers of all time - Jose Mourinho",
     price: 1999.99,
     category: "Trophies",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 11,
@@ -103,7 +106,7 @@ let products = [
     desc: "The most competitive league in Africa, well not anymore because Sundowns has won it more than 5 times in a row",
     price: 2300.89,
     category: "Trophies",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 12,
@@ -112,7 +115,7 @@ let products = [
     desc: "The most valuable club trophy , even 99% of football players would say so.",
     price: 3500.99,
     category: "Trophies",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 13,
@@ -121,7 +124,7 @@ let products = [
     desc: "The most valuable club trophy , even 99% of football players would say so.",
     price: 4500.99,
     category: "Boots",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 14,
@@ -130,17 +133,17 @@ let products = [
     desc: "Innovative soccer boots by Puma, blending advanced technology, sleek design, and performance-enhancing features to elevate players' game to new heights.",
     price: 4000.91,
     category: "Boots",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 15,
     img: "https://i.postimg.cc/LXq09TXY/suntec-removebg-preview.png",
     itemName: "Suntec Boots",
     desc: "Suntec soccer boots: Uniting style and functionality, Suntec presents a fresh approach to the game, combining comfort, precision, and eye-catching design for players who dare to stand out on the field.",
-    oldPrice: 1500.99,
+   
     price: 1000.99,
     category: "Boots",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 16,
@@ -149,17 +152,17 @@ let products = [
     desc: "Cutting-edge soccer boots designed for optimal performance, style, and durability, empowering players to dominate the game.",
     price: 4999.99,
     category: "Boots",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 17,
     img: "https://i.postimg.cc/Y0Ss04Z9/lotto-removebg-preview.png",
     itemName: "Lotto Boots",
     desc: "Lotto soccer boots: Crafted with meticulous attention to detail, Lotto delivers reliable performance and unmatched comfort, allowing players to unleash their skills with confidence and finesse on the soccer pitch.",
-    oldPrice: 2500.99,
+   
     price: 2100.99,
     category: "Boots",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 18,
@@ -168,7 +171,7 @@ let products = [
     desc: "Umbro soccer boots: Embodying a rich heritage in the sport, Umbro's soccer boots merge timeless craftsmanship with modern technology, providing players with superior control, agility, and a touch of classic elegance, making every moment on the field truly iconic.",
     price: 3000.87,
     category: "Boots",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 19,
@@ -177,7 +180,7 @@ let products = [
     desc: "Dortmund will never dissapoint with their kits",
     price: 999.99,
     category: "tShirts",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 20,
@@ -186,7 +189,7 @@ let products = [
     desc: "The kit of the best football club in the world",
     price: 1599.99,
     category: "tShirts",
-    numberOfUnits: 11,
+    quantity: 22,
   },
 
   {
@@ -196,7 +199,7 @@ let products = [
     desc: "Liverpool home kit features the iconic red color and incorporates elements of tradition and modern design.",
     price: 1499.99,
     category: "tShirts",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 22,
@@ -205,17 +208,17 @@ let products = [
     desc: "Barcelona home kit showcases the club's traditional blue and red colors, embodying their rich history and distinctive Catalan identity.",
     price: 1500.99,
     category: "tShirts",
-    numberOfUnits: 11,
+    quantity: 22,
   },
   {
     id: 23,
     img: "https://i.postimg.cc/65yBdzNW/chelsea-removebg-preview.png",
     itemName: "Chelsea Home",
     desc: "Chelsea  home kit is predominantly blue, representing the club's identity, and often features accents of white and red, combining tradition and modern aesthetics.",
-    oldPrice: 1499.99,
+
     price: 999.99,
     category: "tShirts",
-    numberOfUnits: 11,
+    quantity: 22,
   },
 
   {
@@ -225,13 +228,13 @@ let products = [
     desc: "Manchester City home kit typically features sky blue as the primary color, symbolizing the club's heritage, with modern design elements that represent their contemporary success and style.",
     price: 1099.95,
     category: "tShirts",
-    numberOfUnits: 11,
+    quantity: 22,
   },
 ];
 function renderProducts() {
   productsContainerEl.innerHTML = "";
   products.forEach((product) => {
-    const { id, itemName, desc, img, price, category, numberOfUnits } = product;
+    const { id, itemName, desc, img, price, category } = product;
     const productEl = document.createElement("div");
     productEl.classList.add("top-picks-items"); 
     productEl.classList.add("col-3"); 
@@ -251,7 +254,7 @@ function renderProducts() {
           <span class="close" onclick="closePopup('popup${id}')">&times;</span>
           <h2>${itemName}</h2>
           <p>${desc}</p>
-          <button class="btn-add-to-cart btn">Add to Cart</button>
+          <button class="btn-add-to-cart btn" onClick="addToCart(${id})">Add to Cart</button> 
        
         </div>
     
@@ -271,7 +274,7 @@ updateCart();
 function renderCartProducts() {
   cartProductEl.innerHTML = "";
   cart.forEach((product) => {
-    const { id, itemName, desc, img, price, category, numberOfUnits } = product;
+    const { id, itemName,  img, price,  numberOfUnits } = product;
     const cartProduct = document.createElement("div");
     cartProduct.innerHTML = `
         <div class="cartProduct">
@@ -280,11 +283,11 @@ function renderCartProducts() {
         <img src="${img}" alt="${itemName}" class="cart_img">
     </div>
     <div class="cart_product_title">
-    <h3>${itemName}</h3>
+    <p>${itemName}</p>
     </div>
         </div>
         <div class="cart_product_price">
-        <h3>Price: R${price}</h3>
+        <p>Price: R${price}</p>
         </div>
         <div class="cart_amount">
         <p class="decrement" onclick="changeNumberOfUnits('minus', ${id})">-</p>
