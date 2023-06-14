@@ -49,15 +49,7 @@ let products = [
     category: "Ball",
     numberOfUnits: 11,
   },
-  {
-    id: 5,
-    img: "https://i.postimg.cc/KjRCQqFF/fifa22-ball-removebg-preview.png",
-    itemName: "FIFA 22 Match Ball",
-    desc: "The ball played at the most valuable tournament",
-    price: 149.99,
-    category: "Ball",
-    numberOfUnits: 11,
-  },
+ 
   {
     id: 6,
     img: "https://i.postimg.cc/NMNW6h3p/laliga-ball-removebg-preview.png",
@@ -247,8 +239,6 @@ function renderProducts() {
     productEl.classList.add("add");
     productEl.classList.add(`${category}`);
     productEl.innerHTML = `
-    
-       
         <div class="img-container">
             <img src="${img}" alt="${itemName}" class="top-picks-img">
             
@@ -470,6 +460,10 @@ function showFilteredContent(btn) {
 
   resetActiveBtn();
   btn.classList.add("active-btn");
+
+  // Trigger sorting after filtering
+  const sortValue = sortSelect.value;
+  sortItems(sortValue);
 }
 
 function resetActiveBtn() {
@@ -478,54 +472,29 @@ function resetActiveBtn() {
   });
 }
 
-// Sorting functionality
-const sortSelect = document.getElementById("sort-select");
-
-sortSelect.addEventListener("change", () => {
-  const sortValue = sortSelect.value;
-
-  if (sortValue === "alphabetical") {
-    sortItemsAlphabetically();
-  } else if (sortValue === "price-high") {
-    sortItemsByPriceHighToLow();
-  } else if (sortValue === "price-low") {
-    sortItemsByPriceLowToHigh();
-  }
-});
-
-function sortItemsAlphabetically() {
+function sortItems(sortValue) {
   const sortedItems = Array.from(allFilterItems).sort((a, b) => {
-    const itemA = a.querySelector("p").textContent.toLowerCase();
-    const itemB = b.querySelector("p").textContent.toLowerCase();
-    return itemA.localeCompare(itemB);
-  });
-
-  displaySortedItems(sortedItems);
-}
-
-function sortItemsByPriceHighToLow() {
-  const sortedItems = Array.from(allFilterItems).sort((a, b) => {
-    const priceA = parseFloat(
-      a.querySelector("p").textContent.replace(/[^\d.]/g, "")
-    );
-    const priceB = parseFloat(
-      b.querySelector("p").textContent.replace(/[^\d.]/g, "")
-    );
-    return priceB - priceA;
-  });
-
-  displaySortedItems(sortedItems);
-}
-
-function sortItemsByPriceLowToHigh() {
-  const sortedItems = Array.from(allFilterItems).sort((a, b) => {
-    const priceA = parseFloat(
-      a.querySelector("p").textContent.replace(/[^\d.]/g, "")
-    );
-    const priceB = parseFloat(
-      b.querySelector("p").textContent.replace(/[^\d.]/g, "")
-    );
-    return priceA - priceB;
+    if (sortValue === "alphabetical") {
+      const itemA = a.querySelector("p").textContent.toLowerCase();
+      const itemB = b.querySelector("p").textContent.toLowerCase();
+      return itemA.localeCompare(itemB);
+    } else if (sortValue === "price-high") {
+      const priceA = parseFloat(
+        a.querySelector("p").textContent.replace(/[^\d.]/g, "")
+      );
+      const priceB = parseFloat(
+        b.querySelector("p").textContent.replace(/[^\d.]/g, "")
+      );
+      return priceB - priceA;
+    } else if (sortValue === "price-low") {
+      const priceA = parseFloat(
+        a.querySelector("p").textContent.replace(/[^\d.]/g, "")
+      );
+      const priceB = parseFloat(
+        b.querySelector("p").textContent.replace(/[^\d.]/g, "")
+      );
+      return priceA - priceB;
+    }
   });
 
   displaySortedItems(sortedItems);
@@ -534,10 +503,21 @@ function sortItemsByPriceLowToHigh() {
 function displaySortedItems(sortedItems) {
   const dispProducts = document.querySelector(".products_container");
 
+  // Remove existing items from the display container
+  while (dispProducts.firstChild) {
+    dispProducts.removeChild(dispProducts.firstChild);
+  }
 
+  // Append sorted items to the display container
   sortedItems.forEach((item) => {
-    if (dispProducts.contains(item)) {
-      dispProducts.appendChild(item);
-    } 
+    dispProducts.appendChild(item);
   });
 }
+
+// Sorting functionality
+const sortSelect = document.getElementById("sort-select");
+
+sortSelect.addEventListener("change", () => {
+  const sortValue = sortSelect.value;
+  sortItems(sortValue);
+});
