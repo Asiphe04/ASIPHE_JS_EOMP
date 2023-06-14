@@ -1,4 +1,4 @@
-// <h4 class="price">${data.priceBefore.strike()}</h4>
+
 let balls = [
   {
     id: 1,
@@ -70,9 +70,6 @@ balls.forEach((data) => {
   `;
 });
 
-
-
-
 //End of Soccer balls
 // Trophies
 let trophies = [
@@ -82,15 +79,16 @@ let trophies = [
     itemName: "UCL",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
     price: 4499.99,
-    class: "best-sellers"
+    class: "best-sellers",
   },
   {
     id: 8,
     img: "https://i.postimg.cc/02WL3pZ1/epl-removebg-preview.png",
     itemName: "EPL",
     desc: "The best league in the world, the most watched league in the world.",
+    oldPrice: 10000.99,
     price: 4500.88,
-    class: "specials"
+    class: "specials",
   },
   {
     id: 9,
@@ -133,13 +131,19 @@ trophies.forEach((data) => {
       <div class="img-container">
         <img src="${data.img}" alt="" class="top-picks-img">
       </div>  
-      <p>${data.itemName}<br>R${data.price}</p>
+      <p>${data.itemName}<br> ${
+    data.oldPrice ? `R${data.oldPrice.toString().strike()}` : ""
+  }<br>R${data.price}</p>
       <button class="btn-add-to-cart btn">Add to Cart</button>
-      <button class="btn-see-more btn" onclick="openPopup('popup${data.id}')">See more</button>
+      <button class="btn-see-more btn" onclick="openPopup('popup${
+        data.id
+      }')">See more</button>
     </div> 
     <div id="popup${data.id}" class="popup">
         <div class="popup-content">
-          <span class="close" onclick="closePopup('popup${data.id}')">&times;</span>
+          <span class="close" onclick="closePopup('popup${
+            data.id
+          }')">&times;</span>
           <h2>${data.itemName}</h2>
           <p>${data.desc}</p>
           <button class="btn-add-to-cart btn">Add to Cart</button>
@@ -155,7 +159,7 @@ let boots = [
     itemName: "Adidas boots",
     desc: "The most valuable club trophy , even 99% of football players would say so.",
     price: 4500.99,
-    class: "best-sellers"
+    class: "best-sellers",
   },
   {
     id: 14,
@@ -163,15 +167,16 @@ let boots = [
     itemName: "Puma Boots",
     desc: "Innovative soccer boots by Puma, blending advanced technology, sleek design, and performance-enhancing features to elevate players' game to new heights.",
     price: 4000.91,
-    class: "best-sellers"
+    class: "best-sellers",
   },
   {
     id: 15,
     img: "https://i.postimg.cc/LXq09TXY/suntec-removebg-preview.png",
     itemName: "Suntec Boots",
     desc: "Suntec soccer boots: Uniting style and functionality, Suntec presents a fresh approach to the game, combining comfort, precision, and eye-catching design for players who dare to stand out on the field.",
+    oldPrice: 1500.99,
     price: 1000.99,
-    class: "specials"
+    class: "specials",
   },
   {
     id: 16,
@@ -179,15 +184,16 @@ let boots = [
     itemName: "Nike Boots",
     desc: "Cutting-edge soccer boots designed for optimal performance, style, and durability, empowering players to dominate the game.",
     price: 4999.99,
-    class: "best-sellers"
+    class: "best-sellers",
   },
   {
     id: 17,
     img: "https://i.postimg.cc/Y0Ss04Z9/lotto-removebg-preview.png",
     itemName: "Lotto Boots",
     desc: "Lotto soccer boots: Crafted with meticulous attention to detail, Lotto delivers reliable performance and unmatched comfort, allowing players to unleash their skills with confidence and finesse on the soccer pitch.",
+    oldPrice: 2500.99,
     price: 2100.99,
-    class: "specials"
+    class: "specials",
   },
   {
     id: 18,
@@ -209,13 +215,19 @@ boots.forEach((data) => {
       <div class="img-container">
         <img src="${data.img}" alt="" class="top-picks-img">
       </div>  
-      <p>${data.itemName}<br>R${data.price}</p>
+      <p>${data.itemName}<br> ${
+    data.oldPrice ? `R${data.oldPrice.toString().strike()}` : ""
+  }<br>R${data.price}</p>
       <button class="btn-add-to-cart btn">Add to Cart</button>
-      <button class="btn-see-more btn" onclick="openPopup('popup${data.id}')">See more</button>
+      <button class="btn-see-more btn" onclick="openPopup('popup${
+        data.id
+      }')">See more</button>
     </div>
     <div id="popup${data.id}" class="popup">
         <div class="popup-content">
-          <span class="close" onclick="closePopup('popup${data.id}')">&times;</span>
+          <span class="close" onclick="closePopup('popup${
+            data.id
+          }')">&times;</span>
           <h2>${data.itemName}</h2>
           <p>${data.desc}</p>
           <button class="btn-add-to-cart btn">Add to Cart</button>
@@ -231,7 +243,7 @@ let tShirts = [
     itemName: "BVB Home",
     desc: "Dortmund will never dissapoint with their kits",
     price: 999.99,
-    class: "best-sellers"
+    class: "best-sellers",
   },
   {
     id: 20,
@@ -240,9 +252,8 @@ let tShirts = [
     desc: "The kit of the best football club in the world",
     price: 1599.99,
     class: "new",
-   
   },
- 
+
   {
     id: 21,
     img: "https://i.postimg.cc/C56Y3nbp/liverpool-removebg-preview.png",
@@ -257,17 +268,18 @@ let tShirts = [
     itemName: "FC Barcelona Home",
     desc: "Barcelona home kit showcases the club's traditional blue and red colors, embodying their rich history and distinctive Catalan identity.",
     price: 1500.99,
-    class: "best-sellers"
+    class: "best-sellers",
   },
   {
     id: 23,
     img: "https://i.postimg.cc/65yBdzNW/chelsea-removebg-preview.png",
     itemName: "Chelsea Home",
     desc: "Chelsea  home kit is predominantly blue, representing the club's identity, and often features accents of white and red, combining tradition and modern aesthetics.",
+    oldPrice: 1499.99,
     price: 999.99,
-    class: "specials"
+    class: "specials",
   },
-  
+
   {
     id: 24,
     img: "https://i.postimg.cc/wv29kGvv/mancity-removebg-preview.png",
@@ -280,25 +292,32 @@ let dispTshirts = document.querySelector(".tShirts");
 
 tShirts.forEach((data) => {
   dispTshirts.innerHTML += `
- 
     <div class="top-picks-items col-3 container all ${data.class}">
       <div class="img-container">
         <img src="${data.img}" alt="" class="top-picks-img">
       </div>  
-      <p>${data.itemName}<br>R${data.price}</p>
+  
+      <p>${data.itemName}<br> ${
+    data.oldPrice ? `R${data.oldPrice.toString().strike()}` : ""
+  }<br>R${data.price}</p>
+      
       <button class="btn-add-to-cart btn">Add to Cart</button>
-      <button class="btn-see-more btn" onclick="openPopup('popup${data.id}')">See more</button>
-    </div>  
+      <button class="btn-see-more btn" onclick="openPopup('popup${
+        data.id
+      }')">See more</button>
+    </div>
     <div id="popup${data.id}" class="popup">
-        <div class="popup-content">
-          <span class="close" onclick="closePopup('popup${data.id}')">&times;</span>
-          <h2>${data.itemName}</h2>
-          <p>${data.desc}</p>
-          <button class="btn-add-to-cart btn">Add to Cart</button>
-        </div>
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup${
+          data.id
+        }')">&times;</span>
+        <h2>${data.itemName}</h2>
+        <p>${data.desc}</p>
+        <button class="btn-add-to-cart btn">Add to Cart</button>
       </div>
-  </div>`;
+    </div>`;
 });
+
 function openPopup(popupId) {
   const popup = document.getElementById(popupId);
   popup.style.display = "block";
@@ -346,7 +365,6 @@ function resetActiveBtn() {
 }
 
 // SORT
-
 
 window.addEventListener("DOMContentLoaded", () => {
   allFilterBtns[0].classList.add("active-btn");
@@ -408,8 +426,12 @@ function sortItemsAlphabetically() {
 
 function sortItemsByPriceHighToLow() {
   const sortedItems = Array.from(allFilterItems).sort((a, b) => {
-    const priceA = parseFloat(a.querySelector("p").textContent.replace(/[^\d.]/g, ""));
-    const priceB = parseFloat(b.querySelector("p").textContent.replace(/[^\d.]/g, ""));
+    const priceA = parseFloat(
+      a.querySelector("p").textContent.replace(/[^\d.]/g, "")
+    );
+    const priceB = parseFloat(
+      b.querySelector("p").textContent.replace(/[^\d.]/g, "")
+    );
     return priceB - priceA;
   });
 
@@ -418,8 +440,12 @@ function sortItemsByPriceHighToLow() {
 
 function sortItemsByPriceLowToHigh() {
   const sortedItems = Array.from(allFilterItems).sort((a, b) => {
-    const priceA = parseFloat(a.querySelector("p").textContent.replace(/[^\d.]/g, ""));
-    const priceB = parseFloat(b.querySelector("p").textContent.replace(/[^\d.]/g, ""));
+    const priceA = parseFloat(
+      a.querySelector("p").textContent.replace(/[^\d.]/g, "")
+    );
+    const priceB = parseFloat(
+      b.querySelector("p").textContent.replace(/[^\d.]/g, "")
+    );
     return priceA - priceB;
   });
 
@@ -444,3 +470,8 @@ function displaySortedItems(sortedItems) {
     }
   });
 }
+
+// CART
+const cartEL = document.querySelector(".cart");
+const cartContainer = document.querySelector(".cart_container");
+const closeCart = document.querySelector("#close_icon");
