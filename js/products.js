@@ -263,6 +263,7 @@ function renderProducts() {
 
     productsContainerEl.appendChild(productEl);
   });
+  localStorage.setItem("products", JSON.stringify(products));
 }
 renderProducts();
 
