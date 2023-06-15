@@ -45,64 +45,136 @@
     <title>Footy Goods</title>
   </head>
   <body>
-    <h1 class="text-center">Admin Page</h1>
-    <form>
-      <div
-        class="container text-center justify-content-center align-items-center"
-      >
-        <div class="row text-center justify-content-center align-items-center">
-          <label>Id:</label>
-          <input type="number" name="input" id="id" placeholder="Add id" />
-          <label>Image URL:</label>
-          <input
-            type="text"
-            name="input"
-            id="img"
-            placeholder="Add image url"
-          />
-          <label>Name of Product:</label>
-          <input
-            type="text"
-            name="input"
-            id="itemName"
-            placeholder="Add name of item"
-          />
-          <label>Description:</label>
-          <input
-            type="text"
-            name="input"
-            id="desc"
-            placeholder="Add description"
-          />
-          <label>Price:</label>
-          <input type="text" name="input" id="price" placeholder="Add price" />
-          <label>Category:</label>
-          <input
-            type="text"
-            name="input"
-            id="category"
-            placeholder="Add Category"
-          />
-          <label>Quantity:</label>
-          <input
-            type="text"
-            name="input"
-            id="quantity"
-            placeholder="Add quantity"
-          />
+    <header>
+      <nav class="navbar position-sticky top-0 left-0 w-100">
+        <div class="navbar d-flex">
+          <div class="circle-link bg-success">
+            <a href="#">FG</a>
+          </div>
+          <h3 class="text-white">FOOTY GOODS STORE</h3>
         </div>
-        <br />
-        <br />
-        <button id="addButton">Add</button>
-        <button id="sortButton">Sort</button>
+        <ul
+          class="links-container d-flex justify-content-center list-unstyled text-white"
+        >
+          <li class="link-item text-white">
+            <a href="/index.html" class="link text-decoration-none text-white"
+              >Home</a
+            >
+          </li>
+          <li class="link-item text-white">
+            <a
+              href="/pages/about.html"
+              class="link text-decoration-none text-white"
+              >About</a
+            >
+          </li>
+
+          <li class="link-item">
+            <a
+              href="/pages/products.html"
+              class="link text-decoration-none text-white"
+              >Products</a
+            >
+          </li>
+          <li class="link-item">
+            <a
+              href="/pages/contact.html"
+              class="contact-link link text-decoration-none text-white"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav d-flex justify-content-end">
+          <div class="nav-items d-flex align-items-center">
+            <a href="/pages/admin.html"
+              ><img
+                src="https://i.postimg.cc/ydw2YnDn/admin3-removebg-preview.png"
+                alt="Cart-img"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <h1 class="text-center">Admin Page</h1>
+
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <form>
+          <div
+            class="container text-center justify-content-center align-items-center"
+          >
+            <div
+              class="row text-center justify-content-center align-items-center"
+            >
+              <label>Id:</label>
+              <input type="number" name="input" id="id" placeholder="Add id" />
+              <label>Image URL:</label>
+              <input
+                type="text"
+                name="input"
+                id="img"
+                placeholder="Add image url"
+                required=" required"
+              />
+              <label>Name of Product:</label>
+              <input
+                type="text"
+                name="input"
+                id="itemName"
+                placeholder="Add name of item"
+                required=" required"
+              />
+              <label>Description:</label>
+              <input
+                type="text"
+                name="input"
+                id="desc"
+                placeholder="Add description"
+                required=" required"
+              />
+              <label>Price:</label>
+              <input
+                type="text"
+                name="input"
+                id="price"
+                placeholder="Add price"
+                required=" required"
+              />
+              <label>Category:</label>
+              <input
+                type="text"
+                name="input"
+                id="category"
+                placeholder="Add Category"
+                required=" required"
+              />
+              <label>Quantity:</label>
+              <input
+                type="text"
+                name="input"
+                id="quantity"
+                placeholder="Add quantity"
+              />
+              <div class="m-2"><button id="addButton">Add</button></div>
+            </div>
+
+            <br />
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
     <div
       class="container text-center justify-content-center align-items-center"
     ></div>
     <br />
     <br />
     <div class="container">
+      <button
+        id="addShowModal"
+        class="container text-center justify-content-center align-items-center"
+      >
+        Add
+      </button>
       <table id="productTable">
         <thead>
           <tr>
@@ -116,10 +188,72 @@
             <th></th>
           </tr>
         </thead>
-        <tbody id="productList">
-          <!-- Generated rows will be inserted here -->
-        </tbody>
+        <tbody id="productList"></tbody>
       </table>
+    </div>
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Product</h2>
+        <form>
+          <div class="container row row-cols-1">
+            <label>Id:</label>
+            <br />
+            <input
+              type="number"
+              name="input"
+              id="editId"
+              placeholder="Edit id"
+            />
+            <label>Image URL:</label>
+            <input
+              type="text"
+              name="input"
+              id="editImg"
+              placeholder="Edit image url"
+            />
+            <label>Name of Product:</label>
+            <input
+              type="text"
+              name="input"
+              id="editItemName"
+              placeholder="Edit name of item"
+            />
+            <label>Description:</label>
+            <br />
+            <input
+              type="text"
+              name="input"
+              id="editDesc"
+              placeholder="Edit description"
+            />
+            <label>Price:</label>
+            <input
+              type="text"
+              name="input"
+              id="editPrice"
+              placeholder="Edit price"
+            />
+            <label>Category:</label>
+            <input
+              type="text"
+              name="input"
+              id="editCategory"
+              placeholder="Edit Category"
+            />
+            <label>Quantity:</label>
+            <input
+              type="text"
+              name="input"
+              id="editQuantity"
+              placeholder="Edit quantity"
+            />
+            <button id="saveButton">Save</button>
+            <br />
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="/js/admin.js"></script>

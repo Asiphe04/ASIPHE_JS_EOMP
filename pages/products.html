@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/style/about.css" />
     <link rel="stylesheet" href="/style/products.css" />
     <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -87,10 +91,10 @@
         <div class="nav d-flex justify-content-end">
           <div class="nav-items d-flex align-items-center">
             <a href="/pages/about.html"
-            ><img
-              src="https://i.postimg.cc/ydw2YnDn/admin3-removebg-preview.png"
-              alt="Cart-img"
-          /></a>
+              ><img
+                src="https://i.postimg.cc/ydw2YnDn/admin3-removebg-preview.png"
+                alt="Cart-img"
+            /></a>
             <a href="#" class="nav_bag"
               ><img
                 src="https://i.postimg.cc/qMmLt28d/cart2-removebg-preview.png"
@@ -131,13 +135,16 @@
           </div>
 
           <div class="clearCart">
+            <button id="checkout" class="btn_clear" onclick="checkout()">
+              Checkout
+            </button>
             <button class="btn_clear">Clear Cart</button>
           </div>
         </div>
       </section>
     </header>
     <!-- End of navbar -->
-
+    <div class="modal-footer"></div>
     <!-- inside product section. -->
 
     <hr class="my-4" />
