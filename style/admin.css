@@ -9,3 +9,52 @@ body {
   background-color: #010409 !important;
   color: white !important;
 }
+
+input {
+  width: 250px !important;
+}
+button {
+  width: 150px !important;
+}
+/* Table styles */
+#productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#productTable th,
+#productTable td {
+  padding: 8px;
+  color: white !important;
+  border: 1px solid #ddd;
+}
+
+#productTable th {
+  background-color: #010409 !important;
+}
+
+/* Button style */
+.deleteButton {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.deleteButton:focus {
+  outline: none;
+}
+
+.deleteButton:active {
+  background-color: #bd2130;
+}
+
+.deleteButton[data-index] {
+  font-size: 14px;
+  font-weight: bold;
+}

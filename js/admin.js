@@ -1,6 +1,6 @@
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
-  const productList = document.getElementById("product-list");
+  const productList = document.getElementById("productList");
   const addButton = document.getElementById("addButton");
   const sortButton = document.getElementById("sortButton");
 
@@ -13,12 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
     productList.innerHTML = "";
 
     // Render each product as a list item
+
     products.forEach((product, index) => {
-      const listItem = document.createElement("li");
+      const listItem = document.createElement("tr");
       listItem.innerHTML = `
-        <span>${product.id}</span>
-        <span>${product.name}</span>
-        <button class="deleteButton" data-index="${index}">Delete</button>
+        <td>${product.id}</td>
+        <td>${product.img}</td>
+        <td>R${product.price}</td>
+        <td>${product.category}</td>
+        <td>${product.desc}</td>
+        <td>${product.quantity}</td>
+        <td><button class="deleteButton" data-index="${index}">Delete</button></td>
       `;
       productList.appendChild(listItem);
     });

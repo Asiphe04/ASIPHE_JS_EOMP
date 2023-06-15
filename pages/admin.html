@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="/style/admin.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -45,40 +46,88 @@
   </head>
   <body>
     <h1 class="text-center">Admin Page</h1>
-
+    <form>
+      <div
+        class="container text-center justify-content-center align-items-center"
+      >
+        <div class="row text-center justify-content-center align-items-center">
+          <label>Id:</label>
+          <input type="text" name="input" id="id" placeholder="Add id" />
+          <label>Id:</label>
+          <input
+            type="text"
+            name="input"
+            id="img"
+            placeholder="Add image url"
+          />
+          <label>Id:</label>
+          <input
+            type="text"
+            name="input"
+            id="itemName"
+            placeholder="Add name of item"
+          />
+          <label>Id:</label>
+          <input
+            type="text"
+            name="input"
+            id="desc"
+            placeholder="Add description"
+          />
+          <label>Id:</label>
+          <input type="text" name="input" id="price" placeholder="Add price" />
+          <label>Id:</label>
+          <input
+            type="text"
+            name="input"
+            id="category"
+            placeholder="Add Category"
+          />
+          <label>Id:</label>
+          <input
+            type="text"
+            name="input"
+            id="quantity"
+            placeholder="Add quantity"
+          />
+          
+        
+        </div>
+        <br>
+        <br>
+        <button id="addButton">Add</button>
+        <button id="sortButton">Sort</button>
+      </div>
+    </form>
+    <div
+      class="container text-center justify-content-center align-items-center"
+    ></div>
+    <br />
+    <br />
     <div class="container">
-      <button id="sortButton">Sort</button>
-
-      <input type="text" name="input" id="id" placeholder="Add id" />
-
-      <input type="text" name="input" id="img" placeholder="Add image url" />
-
-      <input
-        type="text"
-        name="input"
-        id="itemName"
-        placeholder="Add name of item"
-      />
-      <input type="text" name="input" id="desc" placeholder="Add description" />
-
-      <input type="text" name="input" id="price" placeholder="Add price" />
-
-      <input
-        type="text"
-        name="input"
-        id="category"
-        placeholder="Add Category"
-      />
-
-      <input
-        type="text"
-        name="input"
-        id="quantity"
-        placeholder="Add quantity"
-      />
-      <button id="addButton">Add</button>
-      <ul id="product-list"></ul>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="productList">
+          <!-- Generated rows will be inserted here -->
+        </tbody>
+      </table>
     </div>
+
     <script src="/js/admin.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
