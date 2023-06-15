@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     products.forEach((product, index) => {
       const listItem = document.createElement("tr");
       listItem.innerHTML = `
-        <td>${product.id}</td>
+        <td class="td-id">${product.id}</td>
         <td>${product.itemName}</td>
-        <td><img src="${product.img}" class="w-25"></td>
+        <td class="td-img"><img src="${product.img}" class="w-25"></td>
         <td>R${product.price}</td>
         <td>${product.category}</td>
-        <td>${product.desc}</td>
-        <td>${product.quantity}</td>
+        <td class="td-desc">${product.desc}</td>
+        <td class="td-quantity">${product.quantity}</td>
         <td>
           <button class="editButton" data-index="${index}">Edit</button>
           <button class="deleteButton" data-index="${index}">Delete</button>

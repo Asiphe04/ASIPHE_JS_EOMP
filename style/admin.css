@@ -99,3 +99,33 @@ button {
 .modal-content input {
   width: 250px !important;
 }
+/* Media queries for smaller screens */
+@media only screen and (max-width: 768px) {
+  input {
+    width: 100% !important;
+  }
+
+  #productTable th,
+  #productTable td {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #productTable th,
+  #productTable td {
+    font-size: 10px;
+  }
+  .td-desc {
+    display: none;
+  }
+  .td-quantity {
+    display: none;
+  }
+  .td-img {
+    display: none;
+  }
+  .td-id {
+    display: none;
+  }
+}
