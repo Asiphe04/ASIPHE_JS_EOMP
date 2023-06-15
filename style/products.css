@@ -321,6 +321,13 @@ section {
   color: gray;
   cursor: pointer;
 }
+.close_icontwo {
+  position: absolute;
+  right: 10;
+  top: 10;
+  color: gray;
+  cursor: pointer;
+}
 
 .cart_container_title {
   display: grid;
@@ -382,6 +389,14 @@ section {
   padding: 10px 20px;
   border: none;
   background-color: #f12a12;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn_checkout{
+  padding: 10px 20px;
+  border: none;
+  background-color: #238636;
   color: #fff;
   border-radius: 10px;
   cursor: pointer;

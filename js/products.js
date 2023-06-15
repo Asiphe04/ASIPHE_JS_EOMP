@@ -1,5 +1,6 @@
 const cartEl = document.querySelector(".nav_bag");
 const cartContainer = document.querySelector(".cart_container");
+
 const closeCart = document.querySelector("#close_icon");
 const productsContainerEl = document.querySelector(".products_container");
 const cartProductEl = document.querySelector(".cart_products");
@@ -9,10 +10,10 @@ const btnClear = document.querySelector(".btn_clear");
 cartEl.addEventListener("click", () => {
   cartContainer.classList.add("active");
 });
-
 closeCart.addEventListener("click", () => {
   cartContainer.classList.remove("active");
 });
+
 
 let products = JSON.parse(localStorage.getItem("item"))
   ? JSON.parse(localStorage.getItem("item"))
@@ -53,7 +54,6 @@ let products = JSON.parse(localStorage.getItem("item"))
         category: "Ball",
         quantity: 22,
       },
-
       {
         id: 6,
         img: "https://i.postimg.cc/NMNW6h3p/laliga-ball-removebg-preview.png",
@@ -140,7 +140,6 @@ let products = JSON.parse(localStorage.getItem("item"))
         img: "https://i.postimg.cc/LXq09TXY/suntec-removebg-preview.png",
         itemName: "Suntec Boots",
         desc: "Suntec soccer boots: Uniting style and functionality, Suntec presents a fresh approach to the game, combining comfort, precision, and eye-catching design for players who dare to stand out on the field.",
-
         price: 1000.99,
         category: "Boots",
         quantity: 22,
@@ -159,7 +158,6 @@ let products = JSON.parse(localStorage.getItem("item"))
         img: "https://i.postimg.cc/Y0Ss04Z9/lotto-removebg-preview.png",
         itemName: "Lotto Boots",
         desc: "Lotto soccer boots: Crafted with meticulous attention to detail, Lotto delivers reliable performance and unmatched comfort, allowing players to unleash their skills with confidence and finesse on the soccer pitch.",
-
         price: 2100.99,
         category: "Boots",
         quantity: 22,
@@ -191,7 +189,6 @@ let products = JSON.parse(localStorage.getItem("item"))
         category: "tShirts",
         quantity: 22,
       },
-
       {
         id: 21,
         img: "https://i.postimg.cc/C56Y3nbp/liverpool-removebg-preview.png",
@@ -215,12 +212,10 @@ let products = JSON.parse(localStorage.getItem("item"))
         img: "https://i.postimg.cc/65yBdzNW/chelsea-removebg-preview.png",
         itemName: "Chelsea Home",
         desc: "Chelsea  home kit is predominantly blue, representing the club's identity, and often features accents of white and red, combining tradition and modern aesthetics.",
-
         price: 999.99,
         category: "tShirts",
         quantity: 22,
       },
-
       {
         id: 24,
         img: "https://i.postimg.cc/wv29kGvv/mancity-removebg-preview.png",
@@ -260,13 +255,11 @@ function renderProducts() {
     
     </div>
         `;
-
     productsContainerEl.appendChild(productEl);
   });
   localStorage.setItem("products", JSON.stringify(products));
 }
 renderProducts();
-
 // get items from localStorage
 let cart = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
@@ -300,47 +293,35 @@ function renderCartProducts() {
         </div>
       </div>
     `;
-
     cartProductEl.appendChild(cartProduct);
   });
 }
-
 renderCartProducts();
-
 // add to cart functionality
-
 function addToCart(id) {
   const product = products.find((product) => product.id === id);
   cart.push({
     ...product,
     numberOfUnits: 1,
   });
-
   updateCart();
 }
-
 // remove from cart functionality
-
 function removeFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
   updateCart();
 }
-
 // updating our cart
-
 function updateCart() {
   renderCartTotal();
   renderCartProducts();
   localStorage.setItem("cartItems", JSON.stringify(cart));
 }
 updateCart();
-
 // change amount
-
 function changeNumberOfUnits(action, id) {
   cart = cart.map((item) => {
     let numberOfUnits = item.numberOfUnits;
-
     if (item.id === id) {
       if (action === "minus" && numberOfUnits > 1) {
         numberOfUnits--;
@@ -348,33 +329,24 @@ function changeNumberOfUnits(action, id) {
         numberOfUnits++;
       }
     }
-
     return {
       ...item,
       numberOfUnits,
     };
   });
-
   updateCart();
 }
-
 changeNumberOfUnits();
-
 // cart total price
-
 function renderCartTotal() {
   let totalCartPrice = 0;
   totalCartAmount = 0;
-
   cart.forEach((item) => {
     totalCartPrice += item.price * item.numberOfUnits;
   });
-
   totalPriceEl.innerHTML = `Total Price: R${totalCartPrice.toFixed(2)}`;
 }
-
 // clear cart
-
 btnClear.addEventListener("click", () => {
   clearCart();
 });
@@ -387,12 +359,10 @@ function clearCart() {
     }
   }
 }
-
 function openPopup(popupId) {
   const popup = document.getElementById(popupId);
   popup.style.display = "block";
 }
-
 function closePopup(popupId) {
   const popup = document.getElementById(popupId);
   popup.style.display = "none";
@@ -400,20 +370,16 @@ function closePopup(popupId) {
 //FILTER
 const allFilterItems = document.querySelectorAll(".top-picks-items");
 const allFilterBtns = document.querySelectorAll(".filter-btn");
-
 window.addEventListener("DOMContentLoaded", () => {
   allFilterBtns[0].classList.add("active-btn");
 });
-
 allFilterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     showFilteredContent(btn);
   });
 });
-
 function showFilteredContent(btn) {
   const filterValue = btn.dataset.filter;
-
   allFilterItems.forEach((item) => {
     if (filterValue === "all") {
       item.style.display = "block";
@@ -423,32 +389,25 @@ function showFilteredContent(btn) {
       item.style.display = "none";
     }
   });
-
   resetActiveBtn();
   btn.classList.add("active-btn");
 }
-
 function resetActiveBtn() {
   allFilterBtns.forEach((btn) => {
     btn.classList.remove("active-btn");
   });
 }
-
 // SORT
-
 window.addEventListener("DOMContentLoaded", () => {
   allFilterBtns[0].classList.add("active-btn");
 });
-
 allFilterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     showFilteredContent(btn);
   });
 });
-
 function showFilteredContent(btn) {
   const filterValue = btn.dataset.filter;
-
   allFilterItems.forEach((item) => {
     if (filterValue === "all") {
       item.style.display = "block";
@@ -458,21 +417,17 @@ function showFilteredContent(btn) {
       item.style.display = "none";
     }
   });
-
   resetActiveBtn();
   btn.classList.add("active-btn");
-
   // Trigger sorting after filtering
   const sortValue = sortSelect.value;
   sortItems(sortValue);
 }
-
 function resetActiveBtn() {
   allFilterBtns.forEach((btn) => {
     btn.classList.remove("active-btn");
   });
 }
-
 function sortItems(sortValue) {
   const sortedItems = Array.from(allFilterItems).sort((a, b) => {
     if (sortValue === "alphabetical") {
@@ -497,42 +452,66 @@ function sortItems(sortValue) {
       return priceA - priceB;
     }
   });
-
   displaySortedItems(sortedItems);
 }
-
 function displaySortedItems(sortedItems) {
   const dispProducts = document.querySelector(".products_container");
-
   // Remove existing items from the display container
   while (dispProducts.firstChild) {
     dispProducts.removeChild(dispProducts.firstChild);
   }
-
   // Append sorted items to the display container
   sortedItems.forEach((item) => {
     dispProducts.appendChild(item);
   });
 }
-
 // Sorting functionality
 const sortSelect = document.getElementById("sort-select");
-
 sortSelect.addEventListener("change", () => {
   const sortValue = sortSelect.value;
   sortItems(sortValue);
 });
 
+// // Checkout
+// function checkout() {
+  
+//   const modalFooter = document.querySelector(".cart_container");
+//   modalFooter.innerHTML = `
+//   <div class="tick-animation" >
+//       <p>Checkout successful!</p>
+//       <svg fill="#192A51 " height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#192A51 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M474.045,173.813c-4.201,1.371-6.494,5.888-5.123,10.088c7.571,23.199,11.411,47.457,11.411,72.1 c0,62.014-24.149,120.315-68,164.166s-102.153,68-164.167,68s-120.316-24.149-164.167-68S16,318.014,16,256 S40.149,135.684,84,91.833s102.153-68,164.167-68c32.889,0,64.668,6.734,94.455,20.017c28.781,12.834,54.287,31.108,75.81,54.315 c3.004,3.239,8.066,3.431,11.306,0.425c3.24-3.004,3.43-8.065,0.426-11.306c-23-24.799-50.26-44.328-81.024-58.047 C317.287,15.035,283.316,7.833,248.167,7.833c-66.288,0-128.608,25.813-175.48,72.687C25.814,127.392,0,189.712,0,256 c0,66.287,25.814,128.607,72.687,175.479c46.872,46.873,109.192,72.687,175.48,72.687s128.608-25.813,175.48-72.687 c46.873-46.872,72.687-109.192,72.687-175.479c0-26.332-4.105-52.26-12.201-77.064 C482.762,174.736,478.245,172.445,474.045,173.813z"></path> <path d="M504.969,83.262c-4.532-4.538-10.563-7.037-16.98-7.037s-12.448,2.499-16.978,7.034l-7.161,7.161 c-3.124,3.124-3.124,8.189,0,11.313c3.124,3.123,8.19,3.124,11.314-0.001l7.164-7.164c1.51-1.512,3.52-2.344,5.66-2.344 s4.15,0.832,5.664,2.348c1.514,1.514,2.348,3.524,2.348,5.663s-0.834,4.149-2.348,5.663L217.802,381.75 c-1.51,1.512-3.52,2.344-5.66,2.344s-4.15-0.832-5.664-2.348L98.747,274.015c-1.514-1.514-2.348-3.524-2.348-5.663 c0-2.138,0.834-4.149,2.351-5.667c1.51-1.512,3.52-2.344,5.66-2.344s4.15,0.832,5.664,2.348l96.411,96.411 c1.5,1.5,3.535,2.343,5.657,2.343s4.157-0.843,5.657-2.343l234.849-234.849c3.125-3.125,3.125-8.189,0-11.314 c-3.124-3.123-8.189-3.123-11.313,0L212.142,342.129l-90.75-90.751c-4.533-4.538-10.563-7.037-16.98-7.037 s-12.448,2.499-16.978,7.034c-4.536,4.536-7.034,10.565-7.034,16.977c0,6.412,2.498,12.441,7.034,16.978l107.728,107.728 c4.532,4.538,10.563,7.037,16.98,7.037c6.417,0,12.448-2.499,16.977-7.033l275.847-275.848c4.536-4.536,7.034-10.565,7.034-16.978 S509.502,87.794,504.969,83.262z"></path> </g> </g></svg>
+//     </div>
+//   `;
+//   cart = [];
+//   updateCart();
+// }
 // Checkout
-const modalFooter = document.querySelector(".cart_container");
 function checkout() {
-  modalFooter.innerHTML = `
+  try {
+    if (cart.length === 0) {
+      throw new Error("Cart is empty");
+    }
 
-  <div class="tick-animation text-center justify-content-center align-content-center align-items-center" >
-      <p>Checkout successful!</p>
-      <svg fill="#192A51 " height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#192A51 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M474.045,173.813c-4.201,1.371-6.494,5.888-5.123,10.088c7.571,23.199,11.411,47.457,11.411,72.1 c0,62.014-24.149,120.315-68,164.166s-102.153,68-164.167,68s-120.316-24.149-164.167-68S16,318.014,16,256 S40.149,135.684,84,91.833s102.153-68,164.167-68c32.889,0,64.668,6.734,94.455,20.017c28.781,12.834,54.287,31.108,75.81,54.315 c3.004,3.239,8.066,3.431,11.306,0.425c3.24-3.004,3.43-8.065,0.426-11.306c-23-24.799-50.26-44.328-81.024-58.047 C317.287,15.035,283.316,7.833,248.167,7.833c-66.288,0-128.608,25.813-175.48,72.687C25.814,127.392,0,189.712,0,256 c0,66.287,25.814,128.607,72.687,175.479c46.872,46.873,109.192,72.687,175.48,72.687s128.608-25.813,175.48-72.687 c46.873-46.872,72.687-109.192,72.687-175.479c0-26.332-4.105-52.26-12.201-77.064 C482.762,174.736,478.245,172.445,474.045,173.813z"></path> <path d="M504.969,83.262c-4.532-4.538-10.563-7.037-16.98-7.037s-12.448,2.499-16.978,7.034l-7.161,7.161 c-3.124,3.124-3.124,8.189,0,11.313c3.124,3.123,8.19,3.124,11.314-0.001l7.164-7.164c1.51-1.512,3.52-2.344,5.66-2.344 s4.15,0.832,5.664,2.348c1.514,1.514,2.348,3.524,2.348,5.663s-0.834,4.149-2.348,5.663L217.802,381.75 c-1.51,1.512-3.52,2.344-5.66,2.344s-4.15-0.832-5.664-2.348L98.747,274.015c-1.514-1.514-2.348-3.524-2.348-5.663 c0-2.138,0.834-4.149,2.351-5.667c1.51-1.512,3.52-2.344,5.66-2.344s4.15,0.832,5.664,2.348l96.411,96.411 c1.5,1.5,3.535,2.343,5.657,2.343s4.157-0.843,5.657-2.343l234.849-234.849c3.125-3.125,3.125-8.189,0-11.314 c-3.124-3.123-8.189-3.123-11.313,0L212.142,342.129l-90.75-90.751c-4.533-4.538-10.563-7.037-16.98-7.037 s-12.448,2.499-16.978,7.034c-4.536,4.536-7.034,10.565-7.034,16.977c0,6.412,2.498,12.441,7.034,16.978l107.728,107.728 c4.532,4.538,10.563,7.037,16.98,7.037c6.417,0,12.448-2.499,16.977-7.033l275.847-275.848c4.536-4.536,7.034-10.565,7.034-16.978 S509.502,87.794,504.969,83.262z"></path> </g> </g></svg>
-    </div>
-  `;
-  cart = [];
-  updateCart();
+    const modalFooter = document.querySelector(".cart_container");
+    modalFooter.innerHTML = `
+      <div class="tick-animation" >
+        <p>Checkout successful!</p>
+        <svg fill="#192A51 " height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#192A51 ">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path d="M474.045,173.813c-4.201,1.371-6.494,5.888-5.123,10.088c7.571,23.199,11.411,47.457,11.411,72.1 c0,62.014-24.149,120.315-68,164.166s-102.153,68-164.167,68s-120.316-24.149-164.167-68S16,318.014,16,256 S40.149,135.684,84,91.833s102.153-68,164.167-68c32.889,0,64.668,6.734,94.455,20.017c28.781,12.834,54.287,31.108,75.81,54.315 c3.004,3.239,8.066,3.431,11.306,0.425c3.24-3.004,3.43-8.065,0.426-11.306c-23-24.799-50.26-44.328-81.024-58.047 C317.287,15.035,283.316,7.833,248.167,7.833c-66.288,0-128.608,25.813-175.48,72.687C25.814,127.392,0,189.712,0,256 c0,66.287,25.814,128.607,72.687,175.479c46.872,46.873,109.192,72.687,175.48,72.687s128.608-25.813,175.48-72.687 c46.873-46.872,72.687-109.192,72.687-175.479c0-26.332-4.105-52.26-12.201-77.064 C482.762,174.736,478.245,172.445,474.045,173.813z"></path>
+              <path d="M504.969,83.262c-4.532-4.538-10.563-7.037-16.98-7.037s-12.448,2.499-16.978,7.034l-7.161,7.161 c-3.124,3.124-3.124,8.189,0,11.313c3.124,3.123,8.19,3.124,11.314-0.001l7.164-7.164c1.51-1.512,3.52-2.344,5.66-2.344 s4.15,0.832,5.664,2.348c1.514,1.514,2.348,3.524,2.348,5.663s-0.834,4.149-2.348,5.663L217.802,381.75 c-1.51,1.512-3.52,2.344-5.66,2.344s-4.15-0.832-5.664-2.348L98.747,274.015c-1.514-1.514-2.348-3.524-2.348-5.663 c0-2.138,0.834-4.149,2.351-5.667c1.51-1.512,3.52-2.344,5.66-2.344s4.15,0.832,5.664,2.348l96.411,96.411 c1.5,1.5,3.535,2.343,5.657,2.343s4.157-0.843,5.657-2.343l234.849-234.849c3.125-3.125,3.125-8.189,0-11.314 c-3.124-3.123-8.189-3.123-11.313,0L212.142,342.129l-90.75-90.751c-4.533-4.538-10.563-7.037-16.98-7.037 s-12.448,2.499-16.978,7.034c-4.536,4.536-7.034,10.565-7.034,16.977c0,6.412,2.498,12.441,7.034,16.978l107.728,107.728 c4.532,4.538,10.563,7.037,16.98,7.037c6.417,0,12.448-2.499,16.977-7.033l275.847-275.848c4.536-4.536,7.034-10.565,7.034-16.978 S509.502,87.794,504.969,83.262z"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    `;
+
+    cart = [];
+    updateCart();
+  } catch (error) {
+    alert("There's nothing in the cart");
+  }
 }
